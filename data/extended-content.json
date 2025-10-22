@@ -1,0 +1,959 @@
+{
+  "certifications": [
+    {
+      "id": 1,
+      "name": "Shopify Partner Certified",
+      "issuer": "Shopify",
+      "date": "2023-08",
+      "credentialId": "SHOP-2023-45678",
+      "description": "Official Shopify Partner certification demonstrating expertise in theme development, app integration, and e-commerce best practices.",
+      "skills": ["Shopify", "Liquid", "Theme Development", "E-commerce"],
+      "logo": "/assets/images/certs/shopify-certified.png",
+      "verifyUrl": "https://partners.shopify.com/verify/12345"
+    },
+    {
+      "id": 2,
+      "name": "Figma Professional Certification",
+      "issuer": "Figma",
+      "date": "2023-06",
+      "credentialId": "FIG-PRO-2023-8901",
+      "description": "Advanced certification in Figma design systems, component libraries, auto-layout, and collaborative design workflows.",
+      "skills": ["Figma", "UI/UX Design", "Design Systems", "Prototyping"],
+      "logo": "/assets/images/certs/figma-certified.png",
+      "verifyUrl": "https://figma.com/certification/verify/8901"
+    },
+    {
+      "id": 3,
+      "name": "Meta Front-End Developer",
+      "issuer": "Meta (Coursera)",
+      "date": "2023-04",
+      "credentialId": "META-FE-2023-3456",
+      "description": "Comprehensive front-end development program covering React, JavaScript, HTML/CSS, responsive design, and version control.",
+      "skills": ["React", "JavaScript", "HTML", "CSS", "Git"],
+      "logo": "/assets/images/certs/meta-frontend.png",
+      "verifyUrl": "https://coursera.org/verify/META-FE-2023-3456"
+    },
+    {
+      "id": 4,
+      "name": "Google UX Design Professional Certificate",
+      "issuer": "Google (Coursera)",
+      "date": "2023-01",
+      "credentialId": "GOOGLE-UX-2023-7890",
+      "description": "7-course program covering user research, wireframing, prototyping, user testing, and responsive design principles.",
+      "skills": ["UX Design", "User Research", "Wireframing", "Prototyping", "Figma"],
+      "logo": "/assets/images/certs/google-ux.png",
+      "verifyUrl": "https://coursera.org/verify/GOOGLE-UX-2023-7890"
+    },
+    {
+      "id": 5,
+      "name": "AWS Certified Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "date": "2022-11",
+      "credentialId": "AWS-CCP-2022-5432",
+      "description": "Foundational AWS certification covering cloud concepts, security, pricing, and core AWS services.",
+      "skills": ["AWS", "Cloud Computing", "DevOps"],
+      "logo": "/assets/images/certs/aws-certified.png",
+      "verifyUrl": "https://aws.amazon.com/verification/5432"
+    },
+    {
+      "id": 6,
+      "name": "JavaScript Algorithms and Data Structures",
+      "issuer": "freeCodeCamp",
+      "date": "2022-09",
+      "credentialId": "FCC-JS-2022-9876",
+      "description": "300-hour curriculum covering ES6, regular expressions, debugging, data structures, and algorithm scripting.",
+      "skills": ["JavaScript", "Algorithms", "Data Structures"],
+      "logo": "/assets/images/certs/freecodecamp.png",
+      "verifyUrl": "https://freecodecamp.org/certification/shadrack/javascript"
+    }
+  ],
+  "achievements": [
+    {
+      "id": 1,
+      "title": "Built 28+ Shopify Stores",
+      "description": "Successfully launched and optimized 28 Shopify stores across various industries including fashion, beauty, electronics, and food delivery.",
+      "date": "2021-2024",
+      "metric": "28+ stores",
+      "impact": "$5M+ in combined revenue",
+      "icon": "🛍️"
+    },
+    {
+      "id": 2,
+      "title": "Designed 65+ Figma Projects",
+      "description": "Created comprehensive design systems, mobile apps, web applications, and brand identities for clients worldwide.",
+      "date": "2020-2024",
+      "metric": "65+ designs",
+      "impact": "50+ satisfied clients",
+      "icon": "🎨"
+    },
+    {
+      "id": 3,
+      "title": "Top 5% on Upwork",
+      "description": "Achieved Top Rated Plus status on Upwork with 100% Job Success Score and 5.0 average rating from 45+ clients.",
+      "date": "2023",
+      "metric": "100% JSS",
+      "impact": "45+ perfect reviews",
+      "icon": "⭐"
+    },
+    {
+      "id": 4,
+      "title": "40% Average Conversion Increase",
+      "description": "Achieved an average 40% increase in conversion rates across client Shopify stores through UX optimization and custom features.",
+      "date": "2022-2024",
+      "metric": "40% increase",
+      "impact": "Verified by clients",
+      "icon": "📈"
+    },
+    {
+      "id": 5,
+      "title": "Published Design System Used by 500+",
+      "description": "Created and published open-source Figma design system downloaded and used by over 500 designers worldwide.",
+      "date": "2023",
+      "metric": "500+ users",
+      "impact": "Featured on Figma Community",
+      "icon": "🌟"
+    },
+    {
+      "id": 6,
+      "title": "Shopify App Published",
+      "description": "Developed and published custom Shopify app with 150+ active installations and 4.8-star rating.",
+      "date": "2023",
+      "metric": "150+ installs",
+      "impact": "4.8★ rating",
+      "icon": "📱"
+    }
+  ],
+  "workExperience": [
+    {
+      "id": 1,
+      "position": "Senior Shopify Developer",
+      "company": "E-commerce Solutions Inc.",
+      "location": "Remote",
+      "type": "Contract",
+      "startDate": "2023-01",
+      "endDate": "Present",
+      "current": true,
+      "description": "Lead Shopify developer responsible for custom theme development, app integration, and performance optimization for enterprise clients.",
+      "responsibilities": [
+        "Develop custom Shopify themes using Liquid, JavaScript, and CSS",
+        "Build custom Shopify apps using Node.js and React",
+        "Integrate third-party APIs and payment gateways",
+        "Optimize store performance achieving 95+ PageSpeed scores",
+        "Mentor junior developers and conduct code reviews",
+        "Collaborate with designers to implement pixel-perfect designs"
+      ],
+      "achievements": [
+        "Increased client store conversions by average of 35%",
+        "Reduced page load times by 60% through optimization",
+        "Successfully migrated 5 stores from other platforms to Shopify",
+        "Built custom product builder app with 200+ installations"
+      ],
+      "technologies": ["Shopify", "Liquid", "JavaScript", "React", "Node.js", "GraphQL", "REST APIs"]
+    },
+    {
+      "id": 2,
+      "position": "Figma UI/UX Designer",
+      "company": "Design Studio Pro",
+      "location": "Remote",
+      "type": "Freelance",
+      "startDate": "2022-03",
+      "endDate": "Present",
+      "current": true,
+      "description": "Create comprehensive design systems, mobile and web app designs, and brand identities for SaaS companies and startups.",
+      "responsibilities": [
+        "Design complete design systems with 200+ components",
+        "Create high-fidelity mockups and interactive prototypes",
+        "Conduct user research and usability testing",
+        "Develop brand identities including logos and style guides",
+        "Collaborate with development teams for design handoff",
+        "Maintain design consistency across multiple platforms"
+      ],
+      "achievements": [
+        "Created design system used by team of 15+ designers",
+        "Reduced design time by 60% through component libraries",
+        "Won Best Mobile App Design award for fitness app UI",
+        "Featured on Figma Community with 10K+ views"
+      ],
+      "technologies": ["Figma", "Adobe XD", "Sketch", "Photoshop", "Illustrator", "InVision"]
+    },
+    {
+      "id": 3,
+      "position": "Full Stack Web Developer",
+      "company": "Tech Innovations Ltd",
+      "location": "Nairobi, Kenya",
+      "type": "Full-time",
+      "startDate": "2021-06",
+      "endDate": "2022-12",
+      "current": false,
+      "description": "Developed full-stack web applications using MERN stack for various clients including e-commerce platforms and SaaS products.",
+      "responsibilities": [
+        "Built RESTful APIs using Node.js and Express",
+        "Developed responsive front-ends with React and Redux",
+        "Designed and managed MongoDB databases",
+        "Implemented authentication and authorization systems",
+        "Deployed applications to AWS and Heroku",
+        "Collaborated with product managers and designers"
+      ],
+      "achievements": [
+        "Built e-commerce platform serving 2,000+ users",
+        "Reduced API response time by 50% through optimization",
+        "Implemented CI/CD pipeline reducing deployment time by 70%",
+        "Mentored 3 junior developers in React best practices"
+      ],
+      "technologies": ["React", "Node.js", "Express", "MongoDB", "Redux", "AWS", "Docker", "Git"]
+    },
+    {
+      "id": 4,
+      "position": "Junior Web Developer",
+      "company": "Digital Agency Kenya",
+      "location": "Nairobi, Kenya",
+      "type": "Full-time",
+      "startDate": "2020-01",
+      "endDate": "2021-05",
+      "current": false,
+      "description": "Started career as junior developer building WordPress websites and learning modern web technologies.",
+      "responsibilities": [
+        "Developed custom WordPress themes and plugins",
+        "Created responsive landing pages with HTML/CSS/JavaScript",
+        "Optimized websites for SEO and performance",
+        "Maintained client websites and fixed bugs",
+        "Collaborated with design team on website projects"
+      ],
+      "achievements": [
+        "Built 20+ WordPress websites for small businesses",
+        "Learned React, Node.js, and modern web development",
+        "Improved average website load time by 40%",
+        "Earned employee of the quarter award"
+      ],
+      "technologies": ["WordPress", "PHP", "HTML", "CSS", "JavaScript", "jQuery", "MySQL"]
+    }
+  ],
+  "blogPosts": [
+    {
+      "id": 1,
+      "title": "10 Shopify Theme Customization Tips to Boost Conversions",
+      "slug": "shopify-theme-customization-tips",
+      "excerpt": "Learn the top 10 Shopify theme customization techniques that can increase your store's conversion rates by up to 40%.",
+      "content": "Detailed guide on customizing Shopify themes for better performance...",
+      "category": "Shopify",
+      "tags": ["Shopify", "E-commerce", "Conversion Optimization", "Liquid"],
+      "author": "Shadrack Maina",
+      "publishDate": "2024-01-15",
+      "readTime": "8 min",
+      "views": 2547,
+      "likes": 189,
+      "featured": true,
+      "image": "/assets/images/blog/shopify-customization.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Building a Complete Design System in Figma: Step-by-Step Guide",
+      "slug": "building-design-system-figma",
+      "excerpt": "Comprehensive tutorial on creating scalable design systems with components, variants, and auto-layout in Figma.",
+      "content": "Step-by-step guide for building professional design systems...",
+      "category": "Figma",
+      "tags": ["Figma", "Design Systems", "UI/UX", "Components"],
+      "author": "Shadrack Maina",
+      "publishDate": "2024-01-10",
+      "readTime": "12 min",
+      "views": 3892,
+      "likes": 312,
+      "featured": true,
+      "image": "/assets/images/blog/figma-design-system.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Shopify vs WooCommerce: Which is Better for Your Store?",
+      "slug": "shopify-vs-woocommerce-comparison",
+      "excerpt": "In-depth comparison of Shopify and WooCommerce covering pricing, features, ease of use, and scalability.",
+      "content": "Detailed comparison helping you choose the right platform...",
+      "category": "E-commerce",
+      "tags": ["Shopify", "WooCommerce", "E-commerce", "Comparison"],
+      "author": "Shadrack Maina",
+      "publishDate": "2024-01-05",
+      "readTime": "10 min",
+      "views": 4521,
+      "likes": 267,
+      "featured": false,
+      "image": "/assets/images/blog/shopify-vs-woocommerce.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Mastering Figma Auto-Layout: Advanced Techniques",
+      "slug": "figma-auto-layout-advanced",
+      "excerpt": "Take your Figma skills to the next level with these advanced auto-layout techniques for responsive designs.",
+      "content": "Advanced techniques for creating flexible, responsive designs...",
+      "category": "Figma",
+      "tags": ["Figma", "Auto-Layout", "Responsive Design", "Tutorial"],
+      "author": "Shadrack Maina",
+      "publishDate": "2023-12-20",
+      "readTime": "9 min",
+      "views": 3156,
+      "likes": 245,
+      "featured": false,
+      "image": "/assets/images/blog/figma-auto-layout.jpg"
+    },
+    {
+      "id": 5,
+      "title": "How to Optimize Shopify Store Performance for 95+ PageSpeed",
+      "slug": "optimize-shopify-performance",
+      "excerpt": "Proven strategies to achieve 95+ PageSpeed scores on Shopify stores through image optimization, lazy loading, and code minification.",
+      "content": "Complete optimization guide for lightning-fast Shopify stores...",
+      "category": "Shopify",
+      "tags": ["Shopify", "Performance", "Optimization", "PageSpeed"],
+      "author": "Shadrack Maina",
+      "publishDate": "2023-12-15",
+      "readTime": "11 min",
+      "views": 5234,
+      "likes": 421,
+      "featured": true,
+      "image": "/assets/images/blog/shopify-performance.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Creating Interactive Prototypes in Figma: Best Practices",
+      "slug": "figma-interactive-prototypes",
+      "excerpt": "Learn how to create realistic, interactive prototypes in Figma that wow clients and streamline the development process.",
+      "content": "Best practices for creating engaging interactive prototypes...",
+      "category": "Figma",
+      "tags": ["Figma", "Prototyping", "UX Design", "Interactive"],
+      "author": "Shadrack Maina",
+      "publishDate": "2023-12-10",
+      "readTime": "7 min",
+      "views": 2890,
+      "likes": 198,
+      "featured": false,
+      "image": "/assets/images/blog/figma-prototypes.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Shopify Liquid: Complete Beginner's Guide",
+      "slug": "shopify-liquid-beginners-guide",
+      "excerpt": "Everything you need to know to start coding Shopify themes with Liquid templating language.",
+      "content": "Comprehensive beginner's guide to Liquid programming...",
+      "category": "Shopify",
+      "tags": ["Shopify", "Liquid", "Theme Development", "Tutorial"],
+      "author": "Shadrack Maina",
+      "publishDate": "2023-12-01",
+      "readTime": "15 min",
+      "views": 6789,
+      "likes": 534,
+      "featured": true,
+      "image": "/assets/images/blog/liquid-guide.jpg"
+    },
+    {
+      "id": 8,
+      "title": "10 UI/UX Design Trends to Watch in 2024",
+      "slug": "uiux-design-trends-2024",
+      "excerpt": "Explore the hottest UI/UX design trends that will dominate in 2024, from AI-powered interfaces to immersive 3D experiences.",
+      "content": "Analysis of emerging design trends for the coming year...",
+      "category": "Design",
+      "tags": ["UI/UX", "Design Trends", "2024", "Figma"],
+      "author": "Shadrack Maina",
+      "publishDate": "2023-11-25",
+      "readTime": "6 min",
+      "views": 4312,
+      "likes": 356,
+      "featured": false,
+      "image": "/assets/images/blog/design-trends-2024.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Building a Multi-Vendor Marketplace on Shopify",
+      "slug": "shopify-multi-vendor-marketplace",
+      "excerpt": "Step-by-step guide to creating a multi-vendor marketplace on Shopify with vendor dashboards and payment splitting.",
+      "content": "Complete tutorial for building complex marketplace platforms...",
+      "category": "Shopify",
+      "tags": ["Shopify", "Multi-vendor", "Marketplace", "Advanced"],
+      "author": "Shadrack Maina",
+      "publishDate": "2023-11-20",
+      "readTime": "18 min",
+      "views": 3567,
+      "likes": 289,
+      "featured": false,
+      "image": "/assets/images/blog/multi-vendor.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Figma Plugins Every Designer Should Use in 2024",
+      "slug": "best-figma-plugins-2024",
+      "excerpt": "Curated list of the most useful Figma plugins to boost your productivity and enhance your design workflow.",
+      "content": "Comprehensive review of top Figma plugins with examples...",
+      "category": "Figma",
+      "tags": ["Figma", "Plugins", "Productivity", "Tools"],
+      "author": "Shadrack Maina",
+      "publishDate": "2023-11-15",
+      "readTime": "5 min",
+      "views": 2134,
+      "likes": 167,
+      "featured": false,
+      "image": "/assets/images/blog/figma-plugins.jpg"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "name": "Shopify Theme Development",
+      "category": "shopify",
+      "icon": "🛍️",
+      "shortDescription": "Custom Shopify theme from scratch or theme customization",
+      "fullDescription": "Get a fully custom Shopify theme built from scratch tailored to your brand, or customize an existing theme to match your unique requirements. Includes mobile-first responsive design, performance optimization, SEO best practices, and cross-browser compatibility.",
+      "features": [
+        "Custom theme development from scratch",
+        "Theme customization and optimization",
+        "Mobile-first responsive design",
+        "Performance optimization (95+ PageSpeed)",
+        "SEO best practices implementation",
+        "Cross-browser compatibility",
+        "Custom section creation",
+        "Advanced product filtering",
+        "Wishlist and quick view features",
+        "Integration with Shopify apps"
+      ],
+      "deliverables": [
+        "Fully functional Shopify theme",
+        "Theme documentation",
+        "Admin setup guide",
+        "30 days post-launch support",
+        "Source code with comments"
+      ],
+      "pricing": {
+        "basic": {
+          "price": "$500",
+          "duration": "1-2 weeks",
+          "description": "Theme customization, minor modifications"
+        },
+        "standard": {
+          "price": "$1,500",
+          "duration": "3-4 weeks",
+          "description": "Custom sections, advanced features"
+        },
+        "premium": {
+          "price": "$3,500+",
+          "duration": "6-8 weeks",
+          "description": "Complete custom theme, all features"
+        }
+      },
+      "processSteps": [
+        "Discovery & requirements gathering",
+        "Design review & planning",
+        "Theme development & coding",
+        "Testing & optimization",
+        "Launch & handover",
+        "Post-launch support"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Shopify App Development",
+      "category": "shopify",
+      "icon": "📱",
+      "shortDescription": "Custom Shopify apps and integrations",
+      "fullDescription": "Build custom Shopify apps to extend your store's functionality. From product customizers to subscription management, I develop apps that integrate seamlessly with your Shopify store.",
+      "features": [
+        "Custom app development",
+        "Private and public apps",
+        "Shopify API integration",
+        "Admin dashboard creation",
+        "Webhook implementation",
+        "Database design & management",
+        "Payment processing integration",
+        "Third-party API connections",
+        "App submission to Shopify App Store",
+        "Ongoing maintenance & updates"
+      ],
+      "deliverables": [
+        "Fully functional Shopify app",
+        "Admin interface",
+        "Technical documentation",
+        "User guide",
+        "90 days support"
+      ],
+      "pricing": {
+        "basic": {
+          "price": "$1,000",
+          "duration": "2-3 weeks",
+          "description": "Simple private app, basic features"
+        },
+        "standard": {
+          "price": "$2,500",
+          "duration": "4-6 weeks",
+          "description": "Advanced features, admin dashboard"
+        },
+        "premium": {
+          "price": "$5,000+",
+          "duration": "8-12 weeks",
+          "description": "Complex app, multiple integrations"
+        }
+      },
+      "processSteps": [
+        "Requirements analysis",
+        "Technical specification",
+        "UI/UX design",
+        "Development & coding",
+        "Testing & QA",
+        "Deployment",
+        "App Store submission (if applicable)"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Figma Design System Creation",
+      "category": "figma",
+      "icon": "🎨",
+      "shortDescription": "Complete design system with components and documentation",
+      "fullDescription": "Create a comprehensive design system in Figma with reusable components, variants, styles, and documentation to ensure design consistency across your product.",
+      "features": [
+        "200+ UI components",
+        "Component variants (states, sizes)",
+        "Auto-layout implementation",
+        "Color system with tokens",
+        "Typography scale",
+        "Icon library (300+ icons)",
+        "Dark & light mode variants",
+        "Responsive breakpoints",
+        "Interactive prototypes",
+        "Comprehensive documentation"
+      ],
+      "deliverables": [
+        "Complete Figma design system",
+        "Component library",
+        "Style guide documentation",
+        "Usage guidelines",
+        "Team training session"
+      ],
+      "pricing": {
+        "basic": {
+          "price": "$800",
+          "duration": "2-3 weeks",
+          "description": "50 components, basic documentation"
+        },
+        "standard": {
+          "price": "$2,000",
+          "duration": "4-6 weeks",
+          "description": "150 components, full documentation"
+        },
+        "premium": {
+          "price": "$4,000+",
+          "duration": "8-10 weeks",
+          "description": "200+ components, training, support"
+        }
+      },
+      "processSteps": [
+        "Brand audit & research",
+        "Component identification",
+        "Design tokens setup",
+        "Component creation",
+        "Documentation writing",
+        "Team handover & training"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "UI/UX Design for Web & Mobile",
+      "category": "figma",
+      "icon": "✨",
+      "shortDescription": "Complete UI/UX design from research to high-fidelity mockups",
+      "fullDescription": "End-to-end UI/UX design service including user research, wireframing, high-fidelity mockups, and interactive prototypes for web and mobile applications.",
+      "features": [
+        "User research & personas",
+        "Competitive analysis",
+        "Information architecture",
+        "User flows & journeys",
+        "Low-fidelity wireframes",
+        "High-fidelity mockups",
+        "Interactive prototypes",
+        "Usability testing",
+        "Design handoff to developers",
+        "Design system creation"
+      ],
+      "deliverables": [
+        "User research report",
+        "Wireframes & user flows",
+        "High-fidelity designs",
+        "Interactive prototype",
+        "Design specifications",
+        "Assets for development"
+      ],
+      "pricing": {
+        "basic": {
+          "price": "$600",
+          "duration": "1-2 weeks",
+          "description": "5-10 screens, basic prototype"
+        },
+        "standard": {
+          "price": "$1,800",
+          "duration": "3-5 weeks",
+          "description": "20-30 screens, full research"
+        },
+        "premium": {
+          "price": "$4,000+",
+          "duration": "6-10 weeks",
+          "description": "50+ screens, usability testing"
+        }
+      },
+      "processSteps": [
+        "Discovery & research",
+        "Wireframing & user flows",
+        "Visual design",
+        "Prototyping",
+        "User testing",
+        "Design refinement",
+        "Developer handoff"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "E-commerce Store Setup & Optimization",
+      "category": "shopify",
+      "icon": "🚀",
+      "shortDescription": "Complete store setup, migration, and optimization",
+      "fullDescription": "Full-service e-commerce setup including Shopify configuration, product upload, payment gateway integration, and conversion optimization.",
+      "features": [
+        "Shopify store setup & configuration",
+        "Theme installation & customization",
+        "Product import (up to 1000 products)",
+        "Payment gateway integration",
+        "Shipping setup & zones",
+        "Tax configuration",
+        "SEO optimization",
+        "Analytics setup (Google Analytics, etc.)",
+        "Email marketing integration",
+        "Store migration from other platforms"
+      ],
+      "deliverables": [
+        "Fully configured Shopify store",
+        "Products uploaded & categorized",
+        "Payment & shipping configured",
+        "Admin training session",
+        "Store management guide"
+      ],
+      "pricing": {
+        "basic": {
+          "price": "$400",
+          "duration": "3-5 days",
+          "description": "Basic setup, <100 products"
+        },
+        "standard": {
+          "price": "$1,000",
+          "duration": "1-2 weeks",
+          "description": "Full setup, <500 products"
+        },
+        "premium": {
+          "price": "$2,500+",
+          "duration": "2-4 weeks",
+          "description": "Migration, optimization, 1000+ products"
+        }
+      },
+      "processSteps": [
+        "Store setup & configuration",
+        "Theme selection & customization",
+        "Product upload & organization",
+        "Payment & shipping setup",
+        "Testing & optimization",
+        "Training & handover"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Brand Identity Design",
+      "category": "figma",
+      "icon": "🎯",
+      "shortDescription": "Logo design, brand guidelines, and marketing materials",
+      "fullDescription": "Complete brand identity package including logo design, color palette, typography, and comprehensive brand guidelines for consistent brand representation.",
+      "features": [
+        "Logo design (5 concepts, 3 revisions)",
+        "Color palette development",
+        "Typography selection",
+        "Brand guidelines document",
+        "Business card design",
+        "Social media templates",
+        "Email signature design",
+        "Letterhead design",
+        "Brand pattern/texture",
+        "Icon set design"
+      ],
+      "deliverables": [
+        "Final logo files (all formats)",
+        "Brand guidelines PDF (30-50 pages)",
+        "Marketing collateral designs",
+        "Social media kit",
+        "Print-ready files"
+      ],
+      "pricing": {
+        "basic": {
+          "price": "$500",
+          "duration": "1-2 weeks",
+          "description": "Logo only, basic guidelines"
+        },
+        "standard": {
+          "price": "$1,500",
+          "duration": "3-4 weeks",
+          "description": "Full branding, marketing materials"
+        },
+        "premium": {
+          "price": "$3,000+",
+          "duration": "5-8 weeks",
+          "description": "Complete brand system, packaging"
+        }
+      },
+      "processSteps": [
+        "Brand discovery & strategy",
+        "Concept development",
+        "Design refinement",
+        "Guidelines creation",
+        "Collateral design",
+        "Final delivery"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "id": 1,
+      "category": "General",
+      "question": "How long have you been working with Shopify and Figma?",
+      "answer": "I've been working with Shopify for over 3 years, building 28+ stores across various industries. My Figma experience spans 4 years with 65+ projects completed, including design systems, mobile apps, and web applications."
+    },
+    {
+      "id": 2,
+      "category": "Shopify",
+      "question": "Can you migrate my existing store to Shopify?",
+      "answer": "Yes! I can migrate your store from platforms like WooCommerce, Magento, BigCommerce, or custom solutions. This includes transferring products, customers, orders, and maintaining SEO rankings. Migration projects typically take 2-4 weeks depending on store size."
+    },
+    {
+      "id": 3,
+      "category": "Shopify",
+      "question": "Do you build custom Shopify apps?",
+      "answer": "Absolutely! I develop both private and public Shopify apps using Node.js and React. This includes product customizers, subscription systems, custom dashboards, and third-party integrations. Custom apps start at $1,000 and take 2-12 weeks depending on complexity."
+    },
+    {
+      "id": 4,
+      "category": "Figma",
+      "question": "What's included in a design system?",
+      "answer": "A complete design system includes 200+ UI components with variants, typography scales, color systems (with dark/light modes), icon libraries (300+ icons), auto-layout implementation, responsive breakpoints, interactive prototypes, and comprehensive documentation. Delivery typically takes 4-10 weeks."
+    },
+    {
+      "id": 5,
+      "category": "Figma",
+      "question": "Can you design both web and mobile apps?",
+      "answer": "Yes! I design for all platforms including web applications, iOS apps, Android apps, and responsive websites. My designs are created with development handoff in mind, including proper component naming, constraints, and developer-friendly specifications."
+    },
+    {
+      "id": 6,
+      "category": "Pricing",
+      "question": "What are your rates?",
+      "answer": "Rates vary by project complexity. Shopify theme customization starts at $500, custom themes at $1,500, and apps at $1,000. Figma design systems start at $800, UI/UX design at $600. I offer project-based pricing with clear deliverables and timelines. Contact me for a detailed quote."
+    },
+    {
+      "id": 7,
+      "category": "Pricing",
+      "question": "Do you offer payment plans?",
+      "answer": "Yes! For projects over $1,000, I offer flexible payment plans: typically 50% upfront, 30% mid-project, and 20% on completion. For larger projects ($5,000+), we can arrange custom payment schedules."
+    },
+    {
+      "id": 8,
+      "category": "Process",
+      "question": "What's your typical project workflow?",
+      "answer": "My workflow includes: 1) Discovery call to understand requirements, 2) Detailed proposal with timeline and pricing, 3) Contract signing and deposit, 4) Regular updates with milestone deliveries, 5) Testing and revisions, 6) Final delivery and handover, 7) Post-launch support (30-90 days depending on project)."
+    },
+    {
+      "id": 9,
+      "category": "Process",
+      "question": "How often do you provide updates?",
+      "answer": "I provide updates at key milestones and maintain open communication throughout the project. For most projects, you'll receive progress updates 2-3 times per week. I use tools like Slack, Email, and Zoom for communication and collaboration."
+    },
+    {
+      "id": 10,
+      "category": "Process",
+      "question": "How many revisions are included?",
+      "answer": "Standard packages include 2-3 rounds of revisions per milestone. This covers reasonable adjustments and refinements. Major scope changes are discussed separately. I aim for satisfaction within the agreed-upon scope while maintaining project timelines."
+    },
+    {
+      "id": 11,
+      "category": "Technical",
+      "question": "What technologies do you work with?",
+      "answer": "For Shopify: Liquid, JavaScript, React, Node.js, GraphQL, REST APIs. For design: Figma, Adobe XD, Photoshop, Illustrator. For development: HTML5, CSS3, JavaScript (ES6+), React, Redux, Node.js, Express, MongoDB, Git, AWS. Full tech stack available in my portfolio."
+    },
+    {
+      "id": 12,
+      "category": "Technical",
+      "question": "Do you handle Shopify app integrations?",
+      "answer": "Yes! I integrate popular Shopify apps like Klaviyo, Yotpo, Judge.me, ReCharge, Algolia, and many others. I can also build custom integrations with third-party services via APIs. Integration projects typically take 1-2 weeks."
+    },
+    {
+      "id": 13,
+      "category": "Technical",
+      "question": "Can you optimize my store's performance?",
+      "answer": "Absolutely! I specialize in Shopify performance optimization including image optimization, lazy loading, code minification, app audit, and theme cleanup. I've achieved 95+ PageSpeed scores for clients. Optimization projects take 1-2 weeks and start at $400."
+    },
+    {
+      "id": 14,
+      "category": "Support",
+      "question": "Do you provide ongoing support?",
+      "answer": "Yes! All projects include 30-90 days of post-launch support (depending on project size). After that, I offer monthly maintenance packages starting at $200/month covering updates, bug fixes, minor changes, and ongoing optimization."
+    },
+    {
+      "id": 15,
+      "category": "Support",
+      "question": "What if I need changes after the project is complete?",
+      "answer": "Changes within the support period are handled at no extra cost. After the support period, I offer hourly rates ($75/hour) or monthly retainers for ongoing updates and maintenance. Major feature additions are quoted separately."
+    },
+    {
+      "id": 16,
+      "category": "Availability",
+      "question": "What's your current availability?",
+      "answer": "I'm currently accepting new projects! My typical booking schedule is 1-2 weeks out for new projects. For urgent projects, I offer expedited service (50% rush fee). Contact me to discuss your timeline and I'll let you know if I can accommodate."
+    },
+    {
+      "id": 17,
+      "category": "Availability",
+      "question": "What time zones do you work in?",
+      "answer": "I'm based in Kenya (EAT, UTC+3) but work with clients globally. I adjust my schedule to accommodate different time zones and offer flexible communication hours. Most clients in US, EU, and Asia have found scheduling convenient."
+    },
+    {
+      "id": 18,
+      "category": "Collaboration",
+      "question": "Do you work with agencies and other developers?",
+      "answer": "Yes! I regularly partner with agencies, design studios, and development teams as a Shopify/Figma specialist. I can work as part of your team on a project basis or ongoing retainer. White-label services available upon request."
+    },
+    {
+      "id": 19,
+      "category": "Collaboration",
+      "question": "Can you work with my existing design/development team?",
+      "answer": "Absolutely! I'm experienced collaborating with cross-functional teams. I can integrate seamlessly with your designers, developers, product managers, and marketers. I use tools like Figma, Slack, Jira, Trello, and GitHub for collaboration."
+    },
+    {
+      "id": 20,
+      "category": "Getting Started",
+      "question": "How do I get started working with you?",
+      "answer": "Simple! 1) Contact me via email (shaddihmaina15@gmail.com) or LinkedIn with your project details, 2) We'll schedule a free 30-minute discovery call, 3) I'll provide a detailed proposal with timeline and pricing, 4) Once approved, we'll sign a contract and kick off the project. Looking forward to working together!"
+    }
+  ],
+  "tools": {
+    "shopify": [
+      "Shopify Platform",
+      "Shopify CLI",
+      "Theme Kit",
+      "Liquid",
+      "Shopify API (REST & GraphQL)",
+      "Shopify Scripts",
+      "Shopify Flow",
+      "Metafields",
+      "Shopify Plus Features"
+    ],
+    "design": [
+      "Figma",
+      "Adobe XD",
+      "Sketch",
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+      "InVision",
+      "Zeplin",
+      "Framer",
+      "Principle"
+    ],
+    "frontend": [
+      "HTML5",
+      "CSS3",
+      "JavaScript (ES6+)",
+      "React.js",
+      "Redux",
+      "Next.js",
+      "Vue.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "SASS/SCSS",
+      "Bootstrap",
+      "jQuery"
+    ],
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "Python",
+      "PHP",
+      "Ruby",
+      "GraphQL",
+      "REST APIs",
+      "MongoDB",
+      "PostgreSQL",
+      "MySQL",
+      "Firebase"
+    ],
+    "tools_productivity": [
+      "Git & GitHub",
+      "VS Code",
+      "Postman",
+      "Docker",
+      "Webpack",
+      "npm/yarn",
+      "ESLint",
+      "Prettier",
+      "Chrome DevTools"
+    ],
+    "deployment": [
+      "AWS (S3, EC2, Lambda)",
+      "Heroku",
+      "Netlify",
+      "Vercel",
+      "Digital Ocean",
+      "GitHub Pages",
+      "Cloudflare"
+    ],
+    "analytics": [
+      "Google Analytics",
+      "Hotjar",
+      "Mixpanel",
+      "Shopify Analytics",
+      "Facebook Pixel",
+      "Google Tag Manager"
+    ],
+    "collaboration": [
+      "Slack",
+      "Zoom",
+      "Microsoft Teams",
+      "Trello",
+      "Jira",
+      "Asana",
+      "Notion",
+      "Confluence"
+    ],
+    "marketing": [
+      "Klaviyo",
+      "Mailchimp",
+      "SendGrid",
+      "Google Ads",
+      "Facebook Ads",
+      "SEMrush",
+      "Ahrefs"
+    ],
+    "shopify_apps": [
+      "Judge.me",
+      "Yotpo",
+      "ReCharge",
+      "Bold Apps",
+      "Algolia",
+      "Privy",
+      "Oberlo",
+      "Loox",
+      "Smile.io"
+    ]
+  },
+  "extendedStats": {
+    "projectsCompleted": 47,
+    "happyClients": 32,
+    "shopifyStores": 28,
+    "figmaDesigns": 65,
+    "yearsExperience": 5,
+    "coffeeConsumed": 2847,
+    "codeLines": 150000,
+    "githubRepos": 89,
+    "blogArticles": 24,
+    "openSourceContributions": 156,
+    "hoursWorked": 8500,
+    "avgProjectRating": 4.9,
+    "repeatClientRate": 75,
+    "avgResponseTime": "2 hours",
+    "onTimeDelivery": 98,
+    "countriesServed": 18
+  }
+}

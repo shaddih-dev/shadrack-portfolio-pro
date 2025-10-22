@@ -1,0 +1,424 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Shopify Fashion Store - Luxe Boutique",
+      "category": "shopify",
+      "tags": ["Shopify", "Liquid", "E-commerce", "Custom Theme"],
+      "description": "Designed and developed a fully custom Shopify theme for a luxury fashion boutique. Integrated advanced filtering, size guides, wishlist functionality, and seamless checkout experience.",
+      "fullDescription": "Created a high-converting Shopify store with custom theme development using Liquid, JavaScript, and CSS. Implemented product recommendations, Instagram feed integration, advanced search with filtering by size/color/price, multi-currency support, and mobile-first responsive design. Achieved 40% increase in conversion rates.",
+      "image": "/assets/images/projects/shopify-fashion-store.jpg",
+      "technologies": ["Shopify", "Liquid", "JavaScript", "HTML5", "CSS3", "Shopify API"],
+      "features": [
+        "Custom Shopify Theme Development",
+        "Advanced Product Filtering",
+        "Size Guide Integration",
+        "Wishlist & Quick View",
+        "Mobile-First Design",
+        "Multi-Currency Support",
+        "Instagram Feed Integration",
+        "SEO Optimized"
+      ],
+      "metrics": {
+        "conversionRate": "+40%",
+        "pageSpeed": "95/100",
+        "mobileScore": "98/100"
+      },
+      "liveUrl": "https://demo-fashion.myshopify.com",
+      "githubUrl": null,
+      "duration": "6 weeks",
+      "client": "Luxe Boutique",
+      "year": 2024
+    },
+    {
+      "id": 2,
+      "title": "Figma Design System - TechCorp UI Kit",
+      "category": "figma",
+      "tags": ["Figma", "UI/UX", "Design System", "Components"],
+      "description": "Built a comprehensive design system with 200+ reusable components, auto-layout frames, variants, and interactive prototypes for a SaaS company.",
+      "fullDescription": "Developed a complete design system in Figma including typography scales, color systems with dark/light modes, 200+ UI components with variants, icon library, interactive prototypes, and comprehensive documentation. Used for product design across web and mobile platforms.",
+      "image": "/assets/images/projects/figma-design-system.jpg",
+      "technologies": ["Figma", "Auto Layout", "Components", "Variants", "Prototyping"],
+      "features": [
+        "200+ Reusable Components",
+        "Dark & Light Mode Variants",
+        "Responsive Auto-Layout",
+        "Interactive Prototypes",
+        "Typography System",
+        "Color Palette with Tokens",
+        "Icon Library (300+ icons)",
+        "Documentation Pages"
+      ],
+      "metrics": {
+        "components": "200+",
+        "designTime": "-60%",
+        "consistency": "100%"
+      },
+      "liveUrl": "https://figma.com/@shadrack/techcorp-ui",
+      "githubUrl": null,
+      "duration": "8 weeks",
+      "client": "TechCorp",
+      "year": 2024
+    },
+    {
+      "id": 3,
+      "title": "Shopify Beauty & Skincare Store",
+      "category": "shopify",
+      "tags": ["Shopify", "Custom App", "Quiz Builder", "Personalization"],
+      "description": "Developed a personalized skincare store with custom product quiz, subscription model, and AI-powered product recommendations.",
+      "fullDescription": "Built a Shopify store with custom app development for skincare quiz to recommend products based on skin type. Integrated Recharge for subscriptions, custom product bundling, before/after gallery, ingredient glossary, and personalized email marketing automations.",
+      "image": "/assets/images/projects/shopify-beauty-store.jpg",
+      "technologies": ["Shopify", "Shopify Apps", "React", "Node.js", "Shopify API", "Recharge"],
+      "features": [
+        "Custom Product Quiz",
+        "Subscription Integration",
+        "Product Bundling",
+        "Before/After Gallery",
+        "Ingredient Database",
+        "Email Automations",
+        "Customer Portal",
+        "Loyalty Program"
+      ],
+      "metrics": {
+        "subscriptions": "+250%",
+        "aov": "+35%",
+        "retention": "+45%"
+      },
+      "liveUrl": "https://demo-beauty.myshopify.com",
+      "githubUrl": null,
+      "duration": "10 weeks",
+      "client": "Pure Glow Skincare",
+      "year": 2024
+    },
+    {
+      "id": 4,
+      "title": "Mobile App UI/UX - Fitness Tracker",
+      "category": "figma",
+      "tags": ["Figma", "Mobile Design", "UI/UX", "Prototyping"],
+      "description": "Designed a complete mobile fitness app UI with workout tracking, nutrition logging, social features, and gamification elements.",
+      "fullDescription": "Created high-fidelity mockups and interactive prototypes for iOS and Android fitness tracking app. Conducted user research, created user personas, designed onboarding flows, workout screens, nutrition tracker, progress charts, and social feed with achievements system.",
+      "image": "/assets/images/projects/fitness-app-ui.jpg",
+      "technologies": ["Figma", "User Research", "Wireframing", "Prototyping", "User Testing"],
+      "features": [
+        "User Research & Personas",
+        "Wireframes & User Flows",
+        "High-Fidelity Mockups",
+        "Interactive Prototypes",
+        "Onboarding Experience",
+        "Dark Mode Design",
+        "Micro-Animations",
+        "Accessibility Compliance"
+      ],
+      "metrics": {
+        "userSatisfaction": "4.8/5",
+        "taskCompletion": "92%",
+        "screens": "80+"
+      },
+      "liveUrl": "https://figma.com/@shadrack/fitness-tracker",
+      "githubUrl": null,
+      "duration": "5 weeks",
+      "client": "FitLife App",
+      "year": 2023
+    },
+    {
+      "id": 5,
+      "title": "Shopify Electronics Megastore",
+      "category": "shopify",
+      "tags": ["Shopify Plus", "Headless", "React", "Custom Checkout"],
+      "description": "Built a high-performance headless Shopify Plus store for electronics retailer with 10,000+ products and custom checkout flow.",
+      "fullDescription": "Developed headless commerce solution using Shopify Storefront API, React, Next.js, and GraphQL. Implemented advanced search with Algolia, product comparisons, warranty management, live chat, custom checkout with payment plans, and real-time inventory sync.",
+      "image": "/assets/images/projects/shopify-electronics.jpg",
+      "technologies": ["Shopify Plus", "React", "Next.js", "GraphQL", "Algolia", "Tailwind CSS"],
+      "features": [
+        "Headless Architecture",
+        "10,000+ Products",
+        "Advanced Search (Algolia)",
+        "Product Comparison Tool",
+        "Custom Checkout Flow",
+        "Payment Plans Integration",
+        "Warranty Management",
+        "Real-time Inventory"
+      ],
+      "metrics": {
+        "loadTime": "1.2s",
+        "conversion": "+55%",
+        "revenue": "+$2M annually"
+      },
+      "liveUrl": "https://demo-electronics.com",
+      "githubUrl": "https://github.com/shadrack/shopify-headless",
+      "duration": "14 weeks",
+      "client": "MegaTech Electronics",
+      "year": 2023
+    },
+    {
+      "id": 6,
+      "title": "SaaS Dashboard Design - Analytics Platform",
+      "category": "figma",
+      "tags": ["Figma", "SaaS", "Dashboard", "Data Visualization"],
+      "description": "Designed an enterprise analytics dashboard with complex data visualizations, customizable widgets, and multi-user collaboration features.",
+      "fullDescription": "Created comprehensive SaaS dashboard design with focus on data visualization, user customization, and collaboration. Designed 50+ chart types, drag-and-drop dashboard builder, team management interface, real-time collaboration features, and export/reporting tools.",
+      "image": "/assets/images/projects/saas-dashboard.jpg",
+      "technologies": ["Figma", "Data Visualization", "UX Research", "Interaction Design"],
+      "features": [
+        "50+ Chart Types",
+        "Drag-and-Drop Builder",
+        "Real-time Collaboration",
+        "Custom Widget Library",
+        "Team Management UI",
+        "Export & Reporting",
+        "Responsive Design",
+        "White-label Ready"
+      ],
+      "metrics": {
+        "widgets": "50+",
+        "dashboards": "20+",
+        "userFlows": "15+"
+      },
+      "liveUrl": "https://figma.com/@shadrack/analytics-dashboard",
+      "githubUrl": null,
+      "duration": "7 weeks",
+      "client": "DataViz Pro",
+      "year": 2023
+    },
+    {
+      "id": 7,
+      "title": "Shopify Food Delivery Platform",
+      "category": "shopify",
+      "tags": ["Shopify", "Multi-vendor", "Delivery", "Location-based"],
+      "description": "Developed a multi-vendor food delivery marketplace on Shopify with location-based ordering, real-time tracking, and driver management.",
+      "fullDescription": "Built complex multi-vendor platform on Shopify with custom vendor dashboard, location-based product availability, real-time order tracking, driver assignment system, delivery zones management, and integrated payment splitting for vendors.",
+      "image": "/assets/images/projects/shopify-food-delivery.jpg",
+      "technologies": ["Shopify", "Ruby", "JavaScript", "Google Maps API", "Webhooks", "Custom Apps"],
+      "features": [
+        "Multi-vendor Marketplace",
+        "Location-based Ordering",
+        "Real-time Order Tracking",
+        "Driver Management System",
+        "Vendor Dashboard",
+        "Payment Splitting",
+        "Delivery Zone Management",
+        "Customer Rating System"
+      ],
+      "metrics": {
+        "vendors": "150+",
+        "orders": "5,000+/month",
+        "deliveryTime": "-25%"
+      },
+      "liveUrl": "https://demo-fooddelivery.myshopify.com",
+      "githubUrl": null,
+      "duration": "16 weeks",
+      "client": "QuickBite Delivery",
+      "year": 2023
+    },
+    {
+      "id": 8,
+      "title": "E-commerce Website - Full Stack",
+      "category": "web",
+      "tags": ["React", "Node.js", "MongoDB", "Stripe"],
+      "description": "Built a custom e-commerce platform from scratch with React frontend, Node.js backend, payment processing, and admin dashboard.",
+      "fullDescription": "Developed full-stack e-commerce solution with React, Redux, Node.js, Express, MongoDB. Features include user authentication, product management, shopping cart, Stripe payment integration, order management, email notifications, and comprehensive admin panel.",
+      "image": "/assets/images/projects/fullstack-ecommerce.jpg",
+      "technologies": ["React", "Redux", "Node.js", "Express", "MongoDB", "Stripe", "JWT"],
+      "features": [
+        "User Authentication (JWT)",
+        "Product CRUD Operations",
+        "Shopping Cart & Checkout",
+        "Stripe Payment Gateway",
+        "Order Management",
+        "Admin Dashboard",
+        "Email Notifications",
+        "Product Reviews & Ratings"
+      ],
+      "metrics": {
+        "users": "2,000+",
+        "transactions": "$50K+",
+        "uptime": "99.9%"
+      },
+      "liveUrl": "https://demo-ecommerce-shadrack.com",
+      "githubUrl": "https://github.com/shadrack/fullstack-ecommerce",
+      "duration": "12 weeks",
+      "client": "Personal Project",
+      "year": 2023
+    },
+    {
+      "id": 9,
+      "title": "Brand Identity Design - Coffee Roastery",
+      "category": "figma",
+      "tags": ["Figma", "Branding", "Logo Design", "Style Guide"],
+      "description": "Created complete brand identity including logo, color palette, typography, packaging design, and brand guidelines for artisan coffee company.",
+      "fullDescription": "Designed comprehensive brand identity from scratch including logo variations, color system, typography hierarchy, packaging designs, social media templates, business card designs, and 40-page brand style guide with usage guidelines.",
+      "image": "/assets/images/projects/brand-identity-coffee.jpg",
+      "technologies": ["Figma", "Illustrator", "Branding", "Graphic Design"],
+      "features": [
+        "Logo Design (5 variations)",
+        "Color Palette System",
+        "Typography Guidelines",
+        "Packaging Designs",
+        "Social Media Templates",
+        "Business Card Design",
+        "40-page Brand Guide",
+        "Marketing Collateral"
+      ],
+      "metrics": {
+        "deliverables": "50+",
+        "revisions": "3 rounds",
+        "satisfaction": "5/5"
+      },
+      "liveUrl": "https://figma.com/@shadrack/coffee-branding",
+      "githubUrl": null,
+      "duration": "4 weeks",
+      "client": "Roast & Rise Coffee",
+      "year": 2024
+    },
+    {
+      "id": 10,
+      "title": "Shopify Jewelry Store - Luxury Collection",
+      "category": "shopify",
+      "tags": ["Shopify", "Luxury", "3D Product Views", "AR"],
+      "description": "Developed premium jewelry store with 360° product views, augmented reality try-on, appointment booking, and custom engraving options.",
+      "fullDescription": "Created high-end Shopify store for luxury jewelry with 3D product viewer integration, AR try-on feature for rings/earrings, appointment booking system for in-store visits, custom engraving tool, gift wrapping options, and VIP customer portal.",
+      "image": "/assets/images/projects/shopify-jewelry.jpg",
+      "technologies": ["Shopify", "Three.js", "AR Quick Look", "Custom Apps", "Calendly API"],
+      "features": [
+        "360° Product Views",
+        "AR Try-On Feature",
+        "Appointment Booking",
+        "Custom Engraving Tool",
+        "Gift Wrapping Options",
+        "VIP Customer Portal",
+        "Certificate Management",
+        "Insurance Integration"
+      ],
+      "metrics": {
+        "aov": "+65%",
+        "engagement": "+80%",
+        "returns": "-40%"
+      },
+      "liveUrl": "https://demo-jewelry.myshopify.com",
+      "githubUrl": null,
+      "duration": "9 weeks",
+      "client": "Eternal Elegance",
+      "year": 2024
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Sarah Johnson",
+      "position": "CEO, Luxe Boutique",
+      "company": "Fashion Retail",
+      "text": "Shadrack transformed our online presence completely. The Shopify store he built not only looks stunning but has increased our conversion rates by 40%. His attention to detail and understanding of e-commerce is exceptional.",
+      "rating": 5,
+      "projectId": 1,
+      "avatar": "/assets/images/testimonials/sarah.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Michael Chen",
+      "position": "Product Director, TechCorp",
+      "company": "SaaS Platform",
+      "text": "The design system Shadrack created in Figma has reduced our design time by 60% and ensured perfect consistency across all our products. His component library is incredibly well-organized and documented.",
+      "rating": 5,
+      "projectId": 2,
+      "avatar": "/assets/images/testimonials/michael.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Emma Rodriguez",
+      "position": "Founder, Pure Glow Skincare",
+      "company": "Beauty E-commerce",
+      "text": "The custom quiz feature and subscription integration Shadrack built for our Shopify store has increased our customer retention by 45%. He's a true Shopify expert!",
+      "rating": 5,
+      "projectId": 3,
+      "avatar": "/assets/images/testimonials/emma.jpg"
+    }
+  ],
+  "skills": {
+    "shopify": [
+      {
+        "name": "Shopify Theme Development",
+        "level": 95,
+        "icon": "shopify",
+        "experience": "3 years"
+      },
+      {
+        "name": "Liquid Programming",
+        "level": 90,
+        "icon": "code",
+        "experience": "3 years"
+      },
+      {
+        "name": "Shopify Apps Development",
+        "level": 85,
+        "icon": "puzzle-piece",
+        "experience": "2 years"
+      },
+      {
+        "name": "Shopify API Integration",
+        "level": 90,
+        "icon": "plug",
+        "experience": "3 years"
+      }
+    ],
+    "figma": [
+      {
+        "name": "UI/UX Design",
+        "level": 95,
+        "icon": "palette",
+        "experience": "4 years"
+      },
+      {
+        "name": "Figma Design Systems",
+        "level": 92,
+        "icon": "layer-group",
+        "experience": "3 years"
+      },
+      {
+        "name": "Prototyping",
+        "level": 90,
+        "icon": "draw-polygon",
+        "experience": "4 years"
+      },
+      {
+        "name": "User Research",
+        "level": 85,
+        "icon": "users",
+        "experience": "3 years"
+      }
+    ],
+    "development": [
+      {
+        "name": "JavaScript/React",
+        "level": 92,
+        "icon": "react",
+        "experience": "4 years"
+      },
+      {
+        "name": "HTML5 & CSS3",
+        "level": 95,
+        "icon": "html5",
+        "experience": "5 years"
+      },
+      {
+        "name": "Node.js",
+        "level": 85,
+        "icon": "node-js",
+        "experience": "3 years"
+      },
+      {
+        "name": "Git & GitHub",
+        "level": 90,
+        "icon": "github",
+        "experience": "5 years"
+      }
+    ]
+  },
+  "statistics": {
+    "projectsCompleted": 47,
+    "happyClients": 32,
+    "shopifyStores": 28,
+    "figmaDesigns": 65,
+    "yearsExperience": 5,
+    "coffeeConsumed": 2847
+  }
+}

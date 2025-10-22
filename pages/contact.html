@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get In Touch - Shadrack Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        /* Hero Section */
+        .contact-hero {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%);
+            color: white;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .contact-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .contact-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-icon-item i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .hero-icon-item span {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Main Container */
+        .contact-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Contact Methods Grid */
+        .contact-methods-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-heading h2 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .section-heading p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.95);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-methods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-method-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-method-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .contact-method-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .method-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2rem;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .contact-method-card h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .contact-method-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .method-info {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 1rem;
+            word-break: break-word;
+        }
+
+        .method-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .method-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Contact Form Section */
+        .contact-form-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .contact-form-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .contact-form-section .form-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-form-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .form-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .form-group label .required {
+            color: #e74c3c;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .budget-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .budget-option {
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .budget-option:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+
+        .budget-option input[type="radio"] {
+            display: none;
+        }
+
+        .budget-option input[type="radio"]:checked + label {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .budget-option.selected {
+            border-color: #667eea;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+        }
+
+        .file-upload {
+            position: relative;
+        }
+
+        .file-upload input[type="file"] {
+            display: none;
+        }
+
+        .file-upload-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            border: 2px dashed #e0e0e0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .file-upload-label:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+
+        .file-upload-label i {
+            color: #667eea;
+            font-size: 1.5rem;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 1.2rem 3rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Info Column */
+        .info-column {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .info-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .info-item h3 {
+            color: #333;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .info-item h3 i {
+            color: #667eea;
+        }
+
+        .info-item p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .response-time {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #667eea;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        /* FAQ Section */
+        .contact-faq-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .contact-faq-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border: 2px solid #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background: #f8f9ff;
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #e8ebff;
+        }
+
+        .faq-question h3 {
+            color: #333;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .faq-toggle {
+            color: #667eea;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .faq-answer {
+            padding: 1.5rem;
+            color: #666;
+            line-height: 1.8;
+            background: white;
+            display: none;
+        }
+
+        /* Social Media Section */
+        .social-media-section {
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .social-media-section h2 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .social-media-section p {
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .social-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .social-link-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .social-link-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+        }
+
+        .social-link-card i {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .social-link-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .social-link-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Availability Section */
+        .availability-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .availability-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 3rem;
+        }
+
+        .availability-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .availability-card {
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s;
+        }
+
+        .availability-card:hover {
+            border-color: #667eea;
+            transform: scale(1.05);
+        }
+
+        .availability-card i {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .availability-card h3 {
+            color: #333;
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+        }
+
+        .availability-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background: white;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #2ecc71;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Map Section */
+        .map-section {
+            margin: 4rem 0;
+        }
+
+        .map-container {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .map-container h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .map-placeholder i {
+            font-size: 4rem;
+            color: #667eea;
+        }
+
+        .map-placeholder p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 2rem;
+            text-align: center;
+            color: #666;
+            margin-top: 4rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #764ba2;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-heading h2 {
+                font-size: 2rem;
+            }
+
+            .contact-form-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-methods-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .budget-options {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="technologies.html">Technologies</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <h1 data-aos="fade-down">Get In Touch</h1>
+        <p class="subtitle" data-aos="fade-up" data-aos-delay="100">
+            Let's Discuss Your Next Project and Bring Your Ideas to Life
+        </p>
+        <div class="hero-icons" data-aos="fade-up" data-aos-delay="200">
+            <div class="hero-icon-item">
+                <i class="fas fa-clock"></i>
+                <span>24/7 Available</span>
+            </div>
+            <div class="hero-icon-item">
+                <i class="fas fa-bolt"></i>
+                <span>Quick Response</span>
+            </div>
+            <div class="hero-icon-item">
+                <i class="fas fa-comments"></i>
+                <span>Free Consultation</span>
+            </div>
+            <div class="hero-icon-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>NDA Available</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="contact-container">
+        <!-- Contact Methods Section -->
+        <section class="contact-methods-section">
+            <div class="section-heading" data-aos="fade-up">
+                <h2>Choose Your Preferred Method</h2>
+                <p>I'm available through multiple channels. Pick the one that works best for you!</p>
+            </div>
+
+            <div class="contact-methods-grid">
+                <!-- Email -->
+                <div class="contact-method-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="method-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Me</h3>
+                    <p>Send me a detailed message about your project and I'll get back to you within 24 hours.</p>
+                    <div class="method-info">shadrack@example.com</div>
+                    <a href="mailto:shadrack@example.com" class="method-btn">Send Email</a>
+                </div>
+
+                <!-- Phone -->
+                <div class="contact-method-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="method-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Me</h3>
+                    <p>Prefer to talk? Give me a call and let's discuss your project over the phone.</p>
+                    <div class="method-info">+254 794 567 915</div>
+                    <a href="tel:+254794567915" class="method-btn">Call Now</a>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="contact-method-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="method-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>Message me on WhatsApp for quick responses and easy communication.</p>
+                    <div class="method-info">+254 794 567 915</div>
+                    <a href="https://wa.me/254794567915" target="_blank" class="method-btn">Chat on WhatsApp</a>
+                </div>
+
+                <!-- Skype -->
+                <div class="contact-method-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="method-icon">
+                        <i class="fab fa-skype"></i>
+                    </div>
+                    <h3>Skype</h3>
+                    <p>Schedule a video call on Skype to discuss your project in detail.</p>
+                    <div class="method-info">shadrack.dev</div>
+                    <a href="skype:shadrack.dev?chat" class="method-btn">Connect on Skype</a>
+                </div>
+
+                <!-- Telegram -->
+                <div class="contact-method-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="method-icon">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <h3>Telegram</h3>
+                    <p>Reach out via Telegram for secure and fast messaging.</p>
+                    <div class="method-info">@shadrackdev</div>
+                    <a href="https://t.me/shadrackdev" target="_blank" class="method-btn">Message on Telegram</a>
+                </div>
+
+                <!-- Calendly -->
+                <div class="contact-method-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="method-icon">
+                        <i class="far fa-calendar"></i>
+                    </div>
+                    <h3>Schedule a Meeting</h3>
+                    <p>Book a free consultation call at your convenience using my calendar.</p>
+                    <div class="method-info">30-minute free call</div>
+                    <a href="#" class="method-btn">Book Appointment</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-form-section" data-aos="fade-up">
+            <h2>Send Me a Message</h2>
+            <p class="form-subtitle">Fill out the form below and I'll respond within 24 hours</p>
+
+            <div class="contact-form-layout">
+                <!-- Form Column -->
+                <div class="form-column">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+254 794 567 915">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company" placeholder="Your Company">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Needed <span class="required">*</span></label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="web-development">Web Development</option>
+                                <option value="ecommerce">E-commerce Solutions</option>
+                                <option value="mobile-app">Mobile App Development</option>
+                                <option value="ui-ux">UI/UX Design</option>
+                                <option value="wordpress">WordPress Development</option>
+                                <option value="api">API Development</option>
+                                <option value="maintenance">Maintenance & Support</option>
+                                <option value="consulting">Consulting</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Project Budget</label>
+                            <div class="budget-options">
+                                <div class="budget-option">
+                                    <input type="radio" id="budget1" name="budget" value="100-500">
+                                    <label for="budget1">$100 - $500</label>
+                                </div>
+                                <div class="budget-option">
+                                    <input type="radio" id="budget2" name="budget" value="500-1000">
+                                    <label for="budget2">$500 - $1,000</label>
+                                </div>
+                                <div class="budget-option">
+                                    <input type="radio" id="budget3" name="budget" value="1000-2500">
+                                    <label for="budget3">$1,000 - $2,500</label>
+                                </div>
+                                <div class="budget-option">
+                                    <input type="radio" id="budget4" name="budget" value="2500+">
+                                    <label for="budget4">$2,500+</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="timeline">Project Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select timeline</option>
+                                <option value="urgent">Urgent (1-2 weeks)</option>
+                                <option value="soon">Soon (2-4 weeks)</option>
+                                <option value="flexible">Flexible (1-2 months)</option>
+                                <option value="planning">Just Planning</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Project Details <span class="required">*</span></label>
+                            <textarea id="message" name="message" required placeholder="Tell me about your project, goals, and any specific requirements..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Attach Files (Optional)</label>
+                            <div class="file-upload">
+                                <input type="file" id="files" name="files" multiple>
+                                <label for="files" class="file-upload-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Click to upload files</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Info Column -->
+                <div class="info-column">
+                    <div class="info-item" data-aos="fade-left" data-aos-delay="100">
+                        <h3><i class="fas fa-clock"></i> Response Time</h3>
+                        <p>I typically respond to all inquiries within 24 hours during business days. Urgent requests can be accommodated.</p>
+                        <div class="response-time">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Usually within 4-8 hours</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item" data-aos="fade-left" data-aos-delay="200">
+                        <h3><i class="fas fa-comments"></i> Free Consultation</h3>
+                        <p>Every project starts with a free 30-minute consultation to discuss your needs, goals, and how I can help.</p>
+                    </div>
+
+                    <div class="info-item" data-aos="fade-left" data-aos-delay="300">
+                        <h3><i class="fas fa-shield-alt"></i> Confidentiality</h3>
+                        <p>Your project details are kept strictly confidential. NDA available upon request before discussing sensitive information.</p>
+                    </div>
+
+                    <div class="info-item" data-aos="fade-left" data-aos-delay="400">
+                        <h3><i class="fas fa-handshake"></i> No Obligation</h3>
+                        <p>Getting in touch doesn't commit you to anything. Let's have a conversation and see if we're a good fit.</p>
+                    </div>
+
+                    <div class="info-item" data-aos="fade-left" data-aos-delay="500">
+                        <h3><i class="fas fa-chart-line"></i> Free Quote</h3>
+                        <p>I provide detailed, transparent quotes with no hidden fees. You'll know exactly what to expect.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Availability Section -->
+        <section class="availability-section" data-aos="fade-up">
+            <h2>Current Availability</h2>
+            <div class="availability-grid">
+                <div class="availability-card" data-aos="zoom-in" data-aos-delay="0">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Project Slots</h3>
+                    <p>Currently accepting new projects starting in February 2025</p>
+                    <div class="status-indicator">
+                        <span class="status-dot"></span>
+                        <span>2 Slots Available</span>
+                    </div>
+                </div>
+
+                <div class="availability-card" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-headset"></i>
+                    <h3>Support Services</h3>
+                    <p>Ongoing maintenance and support services available for existing clients</p>
+                    <div class="status-indicator">
+                        <span class="status-dot"></span>
+                        <span>Always Available</span>
+                    </div>
+                </div>
+
+                <div class="availability-card" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-clock"></i>
+                    <h3>Consultation Calls</h3>
+                    <p>Free 30-minute consultation calls available Monday - Friday</p>
+                    <div class="status-indicator">
+                        <span class="status-dot"></span>
+                        <span>Book Anytime</span>
+                    </div>
+                </div>
+
+                <div class="availability-card" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Rush Projects</h3>
+                    <p>Urgent projects can be accommodated with priority scheduling</p>
+                    <div class="status-indicator">
+                        <span class="status-dot"></span>
+                        <span>Contact for Details</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section class="social-media-section" data-aos="fade-up">
+            <h2>Connect on Social Media</h2>
+            <p>Follow me for tips, updates, and behind-the-scenes content</p>
+
+            <div class="social-links-grid">
+                <a href="#" class="social-link-card" data-aos="zoom-in" data-aos-delay="0">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <p>Professional network</p>
+                </a>
+
+                <a href="#" class="social-link-card" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>View my code</p>
+                </a>
+
+                <a href="#" class="social-link-card" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fab fa-twitter"></i>
+                    <h3>Twitter</h3>
+                    <p>Latest updates</p>
+                </a>
+
+                <a href="#" class="social-link-card" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fab fa-instagram"></i>
+                    <h3>Instagram</h3>
+                    <p>Creative showcase</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="contact-faq-section" data-aos="fade-up">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+                <div class="faq-question">
+                    <h3>How quickly can you start my project?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Depending on my current workload, I can typically start new projects within 1-2 weeks. For urgent projects, I can arrange priority scheduling. Contact me to discuss your specific timeline needs.
+                </div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="faq-question">
+                    <h3>Do you offer payment plans?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! I offer flexible payment plans for projects over $5,000. Typically, I work with a deposit upfront and milestone-based payments throughout the project. We can discuss a payment structure that works for your budget.
+                </div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="faq-question">
+                    <h3>Can we schedule a video call before starting?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Absolutely! I encourage a free 30-minute consultation call before any project. This helps us get to know each other, discuss your needs, and ensure we're a good fit. You can book a call using my Calendly link above.
+                </div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="faq-question">
+                    <h3>What information should I provide when contacting you?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    The more details, the better! Include your project goals, any specific features you need, your timeline, budget range, and any reference websites or designs you like. This helps me provide you with an accurate quote and timeline.
+                </div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="faq-question">
+                    <h3>Do you work with international clients?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! I work with clients worldwide and am comfortable with different time zones. I'm flexible with meeting times and use tools like Slack, Zoom, and email to ensure smooth communication regardless of location.
+                </div>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="faq-question">
+                    <h3>What happens after I submit the contact form?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    I'll review your message and respond within 24 hours (usually much sooner). We'll set up a call or exchange emails to discuss your project in detail, and I'll provide you with a detailed proposal and quote.
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section" data-aos="fade-up">
+            <div class="map-container">
+                <h2>Location</h2>
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p><strong>Based in Nairobi, Kenya</strong></p>
+                    <p>Serving clients worldwide</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Shadrack Portfolio. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="faq.html">FAQ</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                const toggle = question.querySelector('.faq-toggle');
+
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    toggle.textContent = '+';
+                } else {
+                    answer.style.display = 'block';
+                    toggle.textContent = '-';
+                }
+            });
+        });
+
+        // Budget option selection
+        document.querySelectorAll('.budget-option').forEach(option => {
+            option.addEventListener('click', () => {
+                document.querySelectorAll('.budget-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                option.classList.add('selected');
+                const radio = option.querySelector('input[type="radio"]');
+                radio.checked = true;
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you within 24 hours.');
+            e.target.reset();
+            document.querySelectorAll('.budget-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+        });
+
+        // File upload label update
+        document.getElementById('files').addEventListener('change', (e) => {
+            const label = e.target.nextElementSibling;
+            const fileCount = e.target.files.length;
+            if (fileCount > 0) {
+                label.querySelector('span').textContent = `${fileCount} file(s) selected`;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive Tools & Technologies Stack - Shadrack Wangai Maina">
+    <title>Tools & Technologies | Shadrack Maina</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/icons/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/pages.css">
+    
+    <style>
+        .tech-category {
+            padding: 80px 0;
+        }
+        
+        .tech-category:nth-child(even) {
+            background: #f8f9ff;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .tech-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tech-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+        
+        .tech-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .tech-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tech-level {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            background: #667eea;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tech-experience {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .proficiency-bar {
+            width: 100%;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+        
+        .proficiency-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 1s ease-out;
+        }
+        
+        .tech-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff6b6b;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .tech-badge.expert { background: #51cf66; }
+        .tech-badge.advanced { background: #4dabf7; }
+        .tech-badge.intermediate { background: #ffd43b; color: #333; }
+        
+        .filter-tabs {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0 3rem;
+        }
+        
+        .filter-tab {
+            padding: 0.8rem 2rem;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .filter-tab.active,
+        .filter-tab:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .tech-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .tech-stat {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .tech-stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tech-description {
+            color: #666;
+            line-height: 1.8;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../index.html">
+                    <span class="brand-text">Shadrack<span class="highlight">Maina</span></span>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="../index.html" class="btn-back">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content" data-aos="fade-up">
+                <h1 class="page-title">Tools & <span class="highlight">Technologies</span></h1>
+                <p class="page-subtitle">My comprehensive tech stack and development tools</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stats Overview -->
+    <section style="padding: 60px 0; background: #f8f9ff;">
+        <div class="container">
+            <div class="tech-stats-grid">
+                <div class="tech-stat" data-aos="zoom-in">
+                    <i class="fas fa-code" style="font-size: 2.5rem; color: #667eea; margin-bottom: 1rem;"></i>
+                    <div class="tech-stat-number">30+</div>
+                    <p>Technologies Mastered</p>
+                </div>
+                <div class="tech-stat" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-tools" style="font-size: 2.5rem; color: #667eea; margin-bottom: 1rem;"></i>
+                    <div class="tech-stat-number">50+</div>
+                    <p>Development Tools</p>
+                </div>
+                <div class="tech-stat" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-graduation-cap" style="font-size: 2.5rem; color: #667eea; margin-bottom: 1rem;"></i>
+                    <div class="tech-stat-number">10,000+</div>
+                    <p>Hours of Experience</p>
+                </div>
+                <div class="tech-stat" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-project-diagram" style="font-size: 2.5rem; color: #667eea; margin-bottom: 1rem;"></i>
+                    <div class="tech-stat-number">100+</div>
+                    <p>Projects Built</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Tabs -->
+    <section style="padding: 40px 0;">
+        <div class="container">
+            <div class="filter-tabs" data-aos="fade-up">
+                <button class="filter-tab active" onclick="filterTech('all')">All Technologies</button>
+                <button class="filter-tab" onclick="filterTech('expert')">Expert Level</button>
+                <button class="filter-tab" onclick="filterTech('frontend')">Frontend</button>
+                <button class="filter-tab" onclick="filterTech('backend')">Backend</button>
+                <button class="filter-tab" onclick="filterTech('ecommerce')">E-commerce</button>
+                <button class="filter-tab" onclick="filterTech('design')">Design</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FRONTEND TECHNOLOGIES -->
+    <section class="tech-category" data-category="frontend">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Frontend <span class="highlight">Technologies</span></h2>
+                <p class="section-description">Modern client-side development tools and frameworks</p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card" data-aos="fade-up" data-level="expert" data-category="frontend">
+                    <span class="tech-badge expert">Expert</span>
+                    <div class="tech-icon"><i class="fab fa-react"></i></div>
+                    <h3 class="tech-name">React</h3>
+                    <span class="tech-level">Expert Level</span>
+                    <p class="tech-experience">4 years | 40+ projects</p>
+                    <p class="tech-description">Advanced React development with hooks, context API, custom hooks, performance optimization, and modern patterns.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 95%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="100" data-level="expert" data-category="frontend">
+                    <span class="tech-badge expert">Expert</span>
+                    <div class="tech-icon"><i class="fab fa-js"></i></div>
+                    <h3 class="tech-name">JavaScript (ES6+)</h3>
+                    <span class="tech-level">Expert Level</span>
+                    <p class="tech-experience">5 years | 100+ projects</p>
+                    <p class="tech-description">Deep understanding of modern JavaScript, async/await, promises, closures, prototypes, and design patterns.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 98%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="200" data-level="expert" data-category="frontend">
+                    <span class="tech-badge expert">Expert</span>
+                    <div class="tech-icon"><i class="fab fa-node-js"></i></div>
+                    <h3 class="tech-name">Next.js</h3>
+                    <span class="tech-level">Expert Level</span>
+                    <p class="tech-experience">3 years | 25+ projects</p>
+                    <p class="tech-description">Server-side rendering, static site generation, API routes, and full-stack Next.js applications.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 92%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="300" data-level="advanced" data-category="frontend">
+                    <span class="tech-badge advanced">Advanced</span>
+                    <div class="tech-icon"><i class="fab fa-vuejs"></i></div>
+                    <h3 class="tech-name">Vue.js</h3>
+                    <span class="tech-level">Advanced</span>
+                    <p class="tech-experience">2 years | 15+ projects</p>
+                    <p class="tech-description">Vue 3 composition API, Vuex state management, and component-based architecture.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="400" data-level="expert" data-category="frontend">
+                    <span class="tech-badge expert">Expert</span>
+                    <div class="tech-icon"><i class="fab fa-html5"></i></div>
+                    <h3 class="tech-name">HTML5</h3>
+                    <span class="tech-level">Expert Level</span>
+                    <p class="tech-experience">5+ years | 100+ projects</p>
+                    <p class="tech-description">Semantic HTML, accessibility (WCAG), SEO-friendly markup, and modern HTML5 APIs.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 98%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="500" data-level="expert" data-category="frontend">
+                    <span class="tech-badge expert">Expert</span>
+                    <div class="tech-icon"><i class="fab fa-css3-alt"></i></div>
+                    <h3 class="tech-name">CSS3 & Sass</h3>
+                    <span class="tech-level">Expert Level</span>
+                    <p class="tech-experience">5+ years | 100+ projects</p>
+                    <p class="tech-description">Advanced CSS, Flexbox, Grid, animations, responsive design, and Sass preprocessor.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 96%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="600" data-level="advanced" data-category="frontend">
+                    <span class="tech-badge advanced">Advanced</span>
+                    <div class="tech-icon"><i class="fas fa-wind"></i></div>
+                    <h3 class="tech-name">Tailwind CSS</h3>
+                    <span class="tech-level">Advanced</span>
+                    <p class="tech-experience">2 years | 30+ projects</p>
+                    <p class="tech-description">Utility-first CSS framework, custom configurations, and responsive design patterns.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 90%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="700" data-level="advanced" data-category="frontend">
+                    <span class="tech-badge advanced">Advanced</span>
+                    <div class="tech-icon"><i class="fab fa-bootstrap"></i></div>
+                    <h3 class="tech-name">Bootstrap</h3>
+                    <span class="tech-level">Advanced</span>
+                    <p class="tech-experience">4 years | 50+ projects</p>
+                    <p class="tech-description">Responsive grid system, components customization, and rapid prototyping.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 88%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BACKEND TECHNOLOGIES -->
+    <section class="tech-category" data-category="backend">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Backend <span class="highlight">Technologies</span></h2>
+                <p class="section-description">Server-side development and API technologies</p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card" data-aos="fade-up" data-level="advanced" data-category="backend">
+                    <span class="tech-badge advanced">Advanced</span>
+                    <div class="tech-icon"><i class="fab fa-node"></i></div>
+                    <h3 class="tech-name">Node.js</h3>
+                    <span class="tech-level">Advanced</span>
+                    <p class="tech-experience">4 years | 35+ projects</p>
+                    <p class="tech-description">Server-side JavaScript, Express framework, RESTful APIs, and microservices architecture.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 90%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="100" data-level="advanced" data-category="backend">
+                    <span class="tech-badge advanced">Advanced</span>
+                    <div class="tech-icon"><i class="fas fa-server"></i></div>
+                    <h3 class="tech-name">Express.js</h3>
+                    <span class="tech-level">Advanced</span>
+                    <p class="tech-experience">4 years | 35+ projects</p>
+                    <p class="tech-description">Middleware, routing, authentication, error handling, and API development.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 92%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="200" data-level="intermediate" data-category="backend">
+                    <span class="tech-badge intermediate">Intermediate</span>
+                    <div class="tech-icon"><i class="fab fa-python"></i></div>
+                    <h3 class="tech-name">Python</h3>
+                    <span class="tech-level">Intermediate</span>
+                    <p class="tech-experience">2 years | 10+ projects</p>
+                    <p class="tech-description">Django, Flask, data processing, automation scripts, and backend development.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 75%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="300" data-level="intermediate" data-category="backend">
+                    <span class="tech-badge intermediate">Intermediate</span>
+                    <div class="tech-icon"><i class="fab fa-php"></i></div>
+                    <h3 class="tech-name">PHP</h3>
+                    <span class="tech-level">Intermediate</span>
+                    <p class="tech-experience">3 years | 20+ projects</p>
+                    <p class="tech-description">WordPress development, custom PHP applications, and server-side scripting.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 78%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="400" data-level="advanced" data-category="backend">
+                    <span class="tech-badge advanced">Advanced</span>
+                    <div class="tech-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3 class="tech-name">GraphQL</h3>
+                    <span class="tech-level">Advanced</span>
+                    <p class="tech-experience">2 years | 15+ projects</p>
+                    <p class="tech-description">Schema design, queries, mutations, Apollo Client/Server, and real-time subscriptions.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="500" data-level="expert" data-category="backend">
+                    <span class="tech-badge expert">Expert</span>
+                    <div class="tech-icon"><i class="fas fa-exchange-alt"></i></div>
+                    <h3 class="tech-name">REST APIs</h3>
+                    <span class="tech-level">Expert Level</span>
+                    <p class="tech-experience">5 years | 50+ projects</p>
+                    <p class="tech-description">RESTful architecture, API design, authentication, versioning, and documentation.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 94%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DATABASE TECHNOLOGIES -->
+    <section class="tech-category" data-category="database">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Database <span class="highlight">Technologies</span></h2>
+                <p class="section-description">Data storage and management systems</p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card" data-aos="fade-up" data-level="advanced" data-category="database">
+                    <span class="tech-badge advanced">Advanced</span>
+                    <div class="tech-icon"><i class="fas fa-database"></i></div>
+                    <h3 class="tech-name">MongoDB</h3>
+                    <span class="tech-level">Advanced</span>
+                    <p class="tech-experience">4 years | 30+ projects</p>
+                    <p class="tech-description">NoSQL database, aggregation pipelines, indexing, Mongoose ODM, and Atlas cloud.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 88%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="100" data-level="advanced" data-category="database">
+                    <span class="tech-badge advanced">Advanced</span>
+                    <div class="tech-icon"><i class="fas fa-database"></i></div>
+                    <h3 class="tech-name">MySQL</h3>
+                    <span class="tech-level">Advanced</span>
+                    <p class="tech-experience">4 years | 25+ projects</p>
+                    <p class="tech-description">Relational database design, complex queries, optimization, and stored procedures.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="200" data-level="advanced" data-category="database">
+                    <span class="tech-badge advanced">Advanced</span>
+                    <div class="tech-icon"><i class="fas fa-elephant"></i></div>
+                    <h3 class="tech-name">PostgreSQL</h3>
+                    <span class="tech-level">Advanced</span>
+                    <p class="tech-experience">3 years | 20+ projects</p>
+                    <p class="tech-description">Advanced SQL, JSON support, full-text search, and performance tuning.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 82%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="300" data-level="intermediate" data-category="database">
+                    <span class="tech-badge intermediate">Intermediate</span>
+                    <div class="tech-icon"><i class="fas fa-fire"></i></div>
+                    <h3 class="tech-name">Firebase</h3>
+                    <span class="tech-level">Intermediate</span>
+                    <p class="tech-experience">2 years | 15+ projects</p>
+                    <p class="tech-description">Real-time database, Firestore, authentication, cloud functions, and hosting.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 78%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- E-COMMERCE PLATFORMS -->
+    <section class="tech-category" data-category="ecommerce">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">E-commerce <span class="highlight">Platforms</span></h2>
+                <p class="section-description">Online store development and management</p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card" data-aos="fade-up" data-level="expert" data-category="ecommerce">
+                    <span class="tech-badge expert">Expert</span>
+                    <div class="tech-icon"><i class="fab fa-shopify"></i></div>
+                    <h3 class="tech-name">Shopify</h3>
+                    <span class="tech-level">Expert Level</span>
+                    <p class="tech-experience">4 years | 50+ stores</p>
+                    <p class="tech-description">Liquid templating, Shopify 2.0, app development, theme customization, and API integration.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 98%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="100" data-level="advanced" data-category="ecommerce">
+                    <span class="tech-badge advanced">Advanced</span>
+                    <div class="tech-icon"><i class="fab fa-wordpress"></i></div>
+                    <h3 class="tech-name">WooCommerce</h3>
+                    <span class="tech-level">Advanced</span>
+                    <p class="tech-experience">3 years | 20+ stores</p>
+                    <p class="tech-description">WordPress e-commerce plugin, custom extensions, payment gateways, and store management.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="200" data-level="intermediate" data-category="ecommerce">
+                    <span class="tech-badge intermediate">Intermediate</span>
+                    <div class="tech-icon"><i class="fas fa-shopping-cart"></i></div>
+                    <h3 class="tech-name">Stripe</h3>
+                    <span class="tech-level">Intermediate</span>
+                    <p class="tech-experience">3 years | 30+ integrations</p>
+                    <p class="tech-description">Payment processing, subscription billing, webhooks, and checkout integration.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 80%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="300" data-level="intermediate" data-category="ecommerce">
+                    <span class="tech-badge intermediate">Intermediate</span>
+                    <div class="tech-icon"><i class="fab fa-paypal"></i></div>
+                    <h3 class="tech-name">PayPal</h3>
+                    <span class="tech-level">Intermediate</span>
+                    <p class="tech-experience">3 years | 25+ integrations</p>
+                    <p class="tech-description">Payment gateway integration, IPN handling, and checkout experiences.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 75%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESIGN TOOLS -->
+    <section class="tech-category" data-category="design">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Design <span class="highlight">Tools</span></h2>
+                <p class="section-description">UI/UX design and prototyping software</p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card" data-aos="fade-up" data-level="expert" data-category="design">
+                    <span class="tech-badge expert">Expert</span>
+                    <div class="tech-icon"><i class="fab fa-figma"></i></div>
+                    <h3 class="tech-name">Figma</h3>
+                    <span class="tech-level">Expert Level</span>
+                    <p class="tech-experience">4 years | 100+ designs</p>
+                    <p class="tech-description">UI/UX design, prototyping, design systems, component libraries, and collaborative design.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 96%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="100" data-level="advanced" data-category="design">
+                    <span class="tech-badge advanced">Advanced</span>
+                    <div class="tech-icon"><i class="fas fa-pen-nib"></i></div>
+                    <h3 class="tech-name">Adobe XD</h3>
+                    <span class="tech-level">Advanced</span>
+                    <p class="tech-experience">3 years | 50+ designs</p>
+                    <p class="tech-description">User interface design, interactive prototypes, and design specifications.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="200" data-level="advanced" data-category="design">
+                    <span class="tech-badge advanced">Advanced</span>
+                    <div class="tech-icon"><i class="fab fa-adobe"></i></div>
+                    <h3 class="tech-name">Photoshop</h3>
+                    <span class="tech-level">Advanced</span>
+                    <p class="tech-experience">5 years | 200+ projects</p>
+                    <p class="tech-description">Image editing, web graphics, mockups, and visual design assets.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 88%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="300" data-level="intermediate" data-category="design">
+                    <span class="tech-badge intermediate">Intermediate</span>
+                    <div class="tech-icon"><i class="fab fa-adobe"></i></div>
+                    <h3 class="tech-name">Illustrator</h3>
+                    <span class="tech-level">Intermediate</span>
+                    <p class="tech-experience">2 years | 30+ projects</p>
+                    <p class="tech-description">Vector graphics, logo design, and icon creation.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 72%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEVOPS & DEPLOYMENT -->
+    <section class="tech-category" data-category="devops">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">DevOps & <span class="highlight">Deployment</span></h2>
+                <p class="section-description">Cloud platforms and deployment tools</p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card" data-aos="fade-up" data-level="advanced" data-category="devops">
+                    <span class="tech-badge advanced">Advanced</span>
+                    <div class="tech-icon"><i class="fab fa-git-alt"></i></div>
+                    <h3 class="tech-name">Git & GitHub</h3>
+                    <span class="tech-level">Advanced</span>
+                    <p class="tech-experience">5 years | Daily use</p>
+                    <p class="tech-description">Version control, branching strategies, pull requests, code reviews, and CI/CD.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 92%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="100" data-level="advanced" data-category="devops">
+                    <span class="tech-badge advanced">Advanced</span>
+                    <div class="tech-icon"><i class="fab fa-aws"></i></div>
+                    <h3 class="tech-name">AWS</h3>
+                    <span class="tech-level">Advanced</span>
+                    <p class="tech-experience">3 years | 20+ deployments</p>
+                    <p class="tech-description">EC2, S3, Lambda, CloudFront, RDS, and serverless architecture.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 82%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="200" data-level="advanced" data-category="devops">
+                    <span class="tech-badge advanced">Advanced</span>
+                    <div class="tech-icon"><i class="fas fa-cloud"></i></div>
+                    <h3 class="tech-name">Netlify</h3>
+                    <span class="tech-level">Advanced</span>
+                    <p class="tech-experience">3 years | 50+ sites</p>
+                    <p class="tech-description">Static site hosting, serverless functions, continuous deployment, and form handling.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 90%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="300" data-level="advanced" data-category="devops">
+                    <span class="tech-badge advanced">Advanced</span>
+                    <div class="tech-icon"><i class="fas fa-bolt"></i></div>
+                    <h3 class="tech-name">Vercel</h3>
+                    <span class="tech-level">Advanced</span>
+                    <p class="tech-experience">2 years | 40+ projects</p>
+                    <p class="tech-description">Next.js hosting, serverless functions, edge network, and instant deployment.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 88%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="400" data-level="intermediate" data-category="devops">
+                    <span class="tech-badge intermediate">Intermediate</span>
+                    <div class="tech-icon"><i class="fab fa-docker"></i></div>
+                    <h3 class="tech-name">Docker</h3>
+                    <span class="tech-level">Intermediate</span>
+                    <p class="tech-experience">2 years | 15+ projects</p>
+                    <p class="tech-description">Containerization, Docker Compose, image building, and deployment orchestration.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 75%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="500" data-level="intermediate" data-category="devops">
+                    <span class="tech-badge intermediate">Intermediate</span>
+                    <div class="tech-icon"><i class="fas fa-dharmachakra"></i></div>
+                    <h3 class="tech-name">Kubernetes</h3>
+                    <span class="tech-level">Intermediate</span>
+                    <p class="tech-experience">1 year | 5+ projects</p>
+                    <p class="tech-description">Container orchestration, deployments, services, and cluster management.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 68%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTING & TOOLS -->
+    <section class="tech-category">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Testing & <span class="highlight">Other Tools</span></h2>
+                <p class="section-description">Quality assurance and development utilities</p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card" data-aos="fade-up">
+                    <div class="tech-icon"><i class="fas fa-vial"></i></div>
+                    <h3 class="tech-name">Jest</h3>
+                    <p class="tech-experience">3 years experience</p>
+                    <p class="tech-description">JavaScript testing framework, unit tests, and integration testing.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 82%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tech-icon"><i class="fas fa-check-circle"></i></div>
+                    <h3 class="tech-name">Cypress</h3>
+                    <p class="tech-experience">2 years experience</p>
+                    <p class="tech-description">End-to-end testing, component testing, and test automation.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 75%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tech-icon"><i class="fas fa-code-branch"></i></div>
+                    <h3 class="tech-name">Webpack</h3>
+                    <p class="tech-experience">4 years experience</p>
+                    <p class="tech-description">Module bundling, code splitting, optimization, and build configuration.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tech-icon"><i class="fas fa-cube"></i></div>
+                    <h3 class="tech-name">npm & Yarn</h3>
+                    <p class="tech-experience">5 years experience</p>
+                    <p class="tech-description">Package management, dependency handling, and script automation.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 95%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="tech-icon"><i class="fas fa-file-code"></i></div>
+                    <h3 class="tech-name">ESLint & Prettier</h3>
+                    <p class="tech-experience">4 years experience</p>
+                    <p class="tech-description">Code linting, formatting, style guides, and quality enforcement.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 90%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="tech-icon"><i class="fas fa-terminal"></i></div>
+                    <h3 class="tech-name">VS Code</h3>
+                    <p class="tech-experience">5 years experience</p>
+                    <p class="tech-description">Primary IDE, extensions, debugging, and development workflow.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 98%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="tech-icon"><i class="fas fa-bug"></i></div>
+                    <h3 class="tech-name">Chrome DevTools</h3>
+                    <p class="tech-experience">5 years experience</p>
+                    <p class="tech-description">Debugging, performance profiling, network analysis, and optimization.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 96%;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="tech-icon"><i class="fas fa-mail-bulk"></i></div>
+                    <h3 class="tech-name">Postman</h3>
+                    <p class="tech-experience">4 years experience</p>
+                    <p class="tech-description">API testing, documentation, collections, and automated testing.</p>
+                    <div class="proficiency-bar">
+                        <div class="proficiency-fill" style="width: 92%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box" data-aos="zoom-in">
+                <h2>Need These Skills for Your Project?</h2>
+                <p>Let's discuss how my technical expertise can help achieve your goals</p>
+                <div class="cta-buttons">
+                    <a href="../index.html#contact" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i> Start a Project
+                    </a>
+                    <a href="services.html" class="btn-secondary">
+                        <i class="fas fa-briefcase"></i> View Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Shadrack Wangai Maina. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/shadrackmaina" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/shadrackmaina" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:shaddihmaina15@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+
+        // Filter functionality
+        function filterTech(category) {
+            const cards = document.querySelectorAll('.tech-card');
+            const buttons = document.querySelectorAll('.filter-tab');
+            
+            // Update active button
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filter cards
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.style.display = 'block';
+                } else if (category === 'expert') {
+                    card.style.display = card.getAttribute('data-level') === 'expert' ? 'block' : 'none';
+                } else {
+                    card.style.display = card.getAttribute('data-category') === category ? 'block' : 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

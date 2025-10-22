@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently Asked Questions - Shadrack Wangai Maina Professional Developer">
+    <title>FAQ - Frequently Asked Questions | Shadrack Maina</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/icons/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/pages.css">
+    
+    <style>
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 2rem;
+        }
+        
+        .faq-categories {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+        
+        .category-btn {
+            padding: 0.8rem 1.5rem;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        
+        .category-btn.active,
+        .category-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 6px 12px rgba(102, 126, 234, 0.2);
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            user-select: none;
+        }
+        
+        .faq-icon {
+            font-size: 1.5rem;
+            color: #667eea;
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s;
+            padding: 0 1.5rem;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 1.5rem 1.5rem;
+        }
+        
+        .faq-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem 1rem 3rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 30px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #667eea;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../index.html">
+                    <span class="brand-text">Shadrack<span class="highlight">Maina</span></span>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="../index.html" class="btn-back">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content" data-aos="fade-up">
+                <h1 class="page-title">Frequently Asked <span class="highlight">Questions</span></h1>
+                <p class="page-subtitle">Find answers to common questions about my services and process</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="faq-section">
+        <div class="faq-container">
+            
+            <!-- Search Box -->
+            <div class="search-box" data-aos="fade-up">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" id="searchInput" placeholder="Search for questions...">
+            </div>
+
+            <!-- Category Filters -->
+            <div class="faq-categories" data-aos="fade-up">
+                <button class="category-btn active" data-category="all">All Questions</button>
+                <button class="category-btn" data-category="general">General</button>
+                <button class="category-btn" data-category="services">Services</button>
+                <button class="category-btn" data-category="process">Process</button>
+                <button class="category-btn" data-category="technical">Technical</button>
+                <button class="category-btn" data-category="pricing">Pricing</button>
+            </div>
+
+            <!-- FAQ Items -->
+            <div class="faq-list">
+                
+                <!-- GENERAL -->
+                <div class="faq-item" data-category="general" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">1</span>Who are you and what do you do?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        I'm Shadrack Wangai Maina, a professional Full Stack Web Developer and Shopify Expert based in Kenya. I specialize in creating custom web applications, e-commerce solutions, and UI/UX design using modern technologies like React, Node.js, Shopify, and Figma.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="general" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">2</span>How long have you been developing?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        I have over 5 years of professional experience in web development and have successfully completed 50+ projects for clients worldwide. I continuously update my skills to stay current with the latest technologies and best practices.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="general" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">3</span>What makes you different from other developers?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        I combine technical expertise with strong communication and a client-first approach. I don't just write code—I solve business problems. My specialization in both Shopify e-commerce and custom web development gives me a unique edge in creating solutions that drive real results.
+                    </div>
+                </div>
+
+                <!-- SERVICES -->
+                <div class="faq-item" data-category="services" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">4</span>What services do you offer?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        I offer: Custom Web Development, Shopify Theme Development, UI/UX Design in Figma, E-commerce Solutions, Website Optimization, App Development, API Integration, and ongoing Maintenance & Support.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="services" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">5</span>Do you work with international clients?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! I work with clients worldwide and am comfortable working across different time zones. I use tools like Zoom, Slack, and email to ensure smooth communication regardless of location.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="services" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">6</span>Can you help with an existing project or website?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely! I can help improve, fix bugs, add features, optimize performance, or completely redesign your existing website or application. I'm experienced in working with legacy code and various platforms.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="services" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">7</span>Do you provide website hosting and domain services?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        While I don't directly provide hosting, I can help you choose the best hosting solution for your needs and handle the complete setup and deployment. I work with platforms like Netlify, Vercel, AWS, and traditional hosting providers.
+                    </div>
+                </div>
+
+                <!-- PROCESS -->
+                <div class="faq-item" data-category="process" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">8</span>What is your development process?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        My process includes: 1) Discovery & Planning, 2) Design & Prototyping in Figma, 3) Development, 4) Testing & QA, 5) Launch & Deployment, 6) Support & Maintenance. I keep you informed at every stage.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="process" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">9</span>How long does a typical project take?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Project timelines vary based on complexity. A simple website takes 2-3 weeks, a professional site with custom features takes 4-6 weeks, and complex applications take 8-12 weeks. I'll provide a detailed timeline during our initial consultation.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="process" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">10</span>How do you handle revisions?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Each package includes a set number of revision rounds (typically 2-3 for smaller projects, unlimited for professional packages). Major scope changes are discussed separately. My goal is your complete satisfaction with the final product.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="process" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">11</span>What information do you need to get started?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        I'll need: your business goals, target audience, desired features, design preferences, any existing branding materials, content (text and images), and examples of websites you like. Don't worry—I'll guide you through this during our consultation.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="process" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">12</span>How often will I receive updates?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        I provide regular updates throughout the project—typically weekly for longer projects and at each milestone completion. You'll have access to staging environments to review progress in real-time.
+                    </div>
+                </div>
+
+                <!-- TECHNICAL -->
+                <div class="faq-item" data-category="technical" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">13</span>What technologies do you work with?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Frontend: HTML5, CSS3, JavaScript, React, Next.js, Vue.js | Backend: Node.js, Express, Python, PHP | E-commerce: Shopify, WooCommerce | Design: Figma, Adobe XD | Database: MongoDB, MySQL, PostgreSQL | Cloud: AWS, Netlify, Vercel
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="technical" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">14</span>Will my website be mobile-friendly?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! All websites I build are 100% responsive and mobile-first. They work perfectly on all devices including smartphones, tablets, and desktops. I test on multiple devices and browsers to ensure compatibility.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="technical" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">15</span>Do you optimize websites for search engines (SEO)?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! I implement technical SEO best practices including proper meta tags, semantic HTML, fast loading times, mobile optimization, and structured data. For advanced SEO services, I can provide comprehensive optimization packages.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="technical" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">16</span>How do you ensure website security?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        I implement security best practices including SSL certificates, secure authentication, input validation, protection against common vulnerabilities (SQL injection, XSS, CSRF), regular updates, and secure hosting configurations.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="technical" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">17</span>Can you integrate third-party services and APIs?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely! I have experience integrating payment gateways (Stripe, PayPal, M-Pesa), email services (SendGrid, Mailchimp), analytics (Google Analytics), social media APIs, and various other third-party services.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="technical" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">18</span>Will I be able to update the website myself?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! I can integrate a user-friendly CMS (Content Management System) like WordPress, Shopify admin, or custom admin panels. I also provide training and documentation so you can easily manage content yourself.
+                    </div>
+                </div>
+
+                <!-- PRICING -->
+                <div class="faq-item" data-category="pricing" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">19</span>How much do your services cost?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Pricing varies based on project scope. Starter packages begin at $100, Professional packages at $500, and Enterprise at $1,500+. Shopify-specific work ranges from $100-$1,500. Check my Services page for detailed pricing or contact me for a custom quote.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="pricing" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">20</span>What payment methods do you accept?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        I accept bank transfers, PayPal, credit/debit cards, and M-Pesa for local clients. Payment is typically split: 50% upfront to begin work and 50% upon project completion.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="pricing" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">21</span>Do you offer payment plans?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! For larger projects ($1,000+), I can arrange milestone-based payment plans. We'll divide the project into phases, and you pay as each milestone is completed.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="pricing" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">22</span>Are there any hidden costs?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        No! I provide transparent pricing upfront. The only additional costs might be third-party services you choose (hosting, domain, premium plugins) which I'll discuss with you beforehand.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="services" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">23</span>Do you provide ongoing support after launch?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! All projects include 1-6 months of support depending on the package. After that, I offer maintenance packages starting at $50/month for updates, security, and technical support.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="process" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">24</span>What happens if I'm not satisfied with the work?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Your satisfaction is my priority. I include multiple revision rounds and maintain open communication throughout. If issues arise, we'll work together to resolve them. I won't consider a project complete until you're happy with the result.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="general" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">25</span>How quickly can you start on my project?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Depending on my current workload, I can typically start new projects within 1-2 weeks. For urgent projects, expedited timelines may be available—contact me to discuss your needs.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="technical" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">26</span>Can you work with my existing team or developers?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely! I'm comfortable collaborating with other developers, designers, and teams. I use version control (Git), follow best practices, and communicate effectively to ensure smooth collaboration.
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="services" data-aos="fade-up">
+                    <div class="faq-question">
+                        <span><span class="faq-number">27</span>Do you sign Non-Disclosure Agreements (NDAs)?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, I'm happy to sign NDAs to protect your confidential information and business ideas. Client confidentiality and trust are extremely important to me.
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- No Results Message -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search" style="font-size: 3rem; color: #ddd; margin-bottom: 1rem;"></i>
+                <p>No questions found matching your search.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box" data-aos="zoom-in">
+                <h2>Still Have Questions?</h2>
+                <p>Feel free to reach out—I'm here to help!</p>
+                <div class="cta-buttons">
+                    <a href="../index.html#contact" class="btn-primary">
+                        <i class="fas fa-paper-plane"></i> Contact Me
+                    </a>
+                    <a href="services.html" class="btn-secondary">
+                        <i class="fas fa-briefcase"></i> View Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Shadrack Wangai Maina. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/shadrackmaina" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/shadrackmaina" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:shaddihmaina15@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Category Filter
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        categoryButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.getAttribute('data-category');
+                
+                // Update active button
+                categoryButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Filter FAQ items
+                faqItems.forEach(item => {
+                    if (category === 'all' || item.getAttribute('data-category') === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Check if any items are visible
+                checkNoResults();
+            });
+        });
+
+        // Search Functionality
+        const searchInput = document.getElementById('searchInput');
+        const noResults = document.getElementById('noResults');
+        
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            let hasResults = false;
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                    hasResults = true;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            
+            // Show/hide no results message
+            noResults.style.display = hasResults ? 'none' : 'block';
+            
+            // Reset category filter when searching
+            if (searchTerm) {
+                categoryButtons.forEach(b => b.classList.remove('active'));
+            }
+        });
+
+        function checkNoResults() {
+            const visibleItems = Array.from(faqItems).filter(item => item.style.display !== 'none');
+            noResults.style.display = visibleItems.length === 0 ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Placeholder Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #0a0e27;
+            color: white;
+        }
+        canvas {
+            border: 2px solid #00ff88;
+            margin: 10px;
+            display: block;
+        }
+        button {
+            background: linear-gradient(135deg, #00ff88, #0066ff);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        .status {
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(0, 255, 136, 0.1);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎨 Portfolio Placeholder Image Generator</h1>
+    <p>This will generate all placeholder images for your portfolio</p>
+    
+    <button onclick="generateAllImages()">Generate All Images</button>
+    
+    <div id="status" class="status"></div>
+    <div id="canvasContainer"></div>
+
+    <script>
+        const projects = [
+            { name: 'shopify-fashion-store', title: 'Shopify Fashion Store', color: '#96bf48', icon: '🛍️' },
+            { name: 'figma-design-system', title: 'Figma Design System', color: '#ff0066', icon: '🎨' },
+            { name: 'shopify-beauty-store', title: 'Shopify Beauty Store', color: '#8e44ad', icon: '💄' },
+            { name: 'fitness-app-ui', title: 'Fitness App UI', color: '#e74c3c', icon: '💪' },
+            { name: 'shopify-electronics', title: 'Shopify Electronics', color: '#3498db', icon: '⚡' },
+            { name: 'saas-dashboard', title: 'SaaS Dashboard', color: '#2ecc71', icon: '📊' },
+            { name: 'shopify-food-delivery', title: 'Food Delivery Platform', color: '#f39c12', icon: '🍔' },
+            { name: 'fullstack-ecommerce', title: 'E-commerce Platform', color: '#9b59b6', icon: '🛒' },
+            { name: 'brand-identity-coffee', title: 'Coffee Brand Identity', color: '#795548', icon: '☕' },
+            { name: 'shopify-jewelry', title: 'Jewelry Store', color: '#ffd700', icon: '💎' }
+        ];
+
+        const testimonials = [
+            { name: 'sarah', color: '#e91e63' },
+            { name: 'michael', color: '#2196f3' },
+            { name: 'emma', color: '#4caf50' }
+        ];
+
+        function createCanvas(width, height) {
+            const canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            return canvas;
+        }
+
+        function generateProjectImage(project) {
+            const canvas = createCanvas(1200, 800);
+            const ctx = canvas.getContext('2d');
+
+            // Background gradient
+            const gradient = ctx.createLinearGradient(0, 0, 1200, 800);
+            gradient.addColorStop(0, project.color);
+            gradient.addColorStop(1, '#0a0e27');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 1200, 800);
+
+            // Add grid pattern
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+            ctx.lineWidth = 1;
+            for (let i = 0; i < 1200; i += 50) {
+                ctx.beginPath();
+                ctx.moveTo(i, 0);
+                ctx.lineTo(i, 800);
+                ctx.stroke();
+            }
+            for (let i = 0; i < 800; i += 50) {
+                ctx.beginPath();
+                ctx.moveTo(0, i);
+                ctx.lineTo(1200, i);
+                ctx.stroke();
+            }
+
+            // Add decorative circles
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.05)';
+            ctx.beginPath();
+            ctx.arc(200, 200, 150, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.arc(1000, 600, 200, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Add icon
+            ctx.font = 'bold 120px Arial';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+            ctx.textAlign = 'center';
+            ctx.fillText(project.icon, 600, 300);
+
+            // Add title
+            ctx.font = 'bold 48px Arial';
+            ctx.fillStyle = 'white';
+            ctx.textAlign = 'center';
+            ctx.fillText(project.title.toUpperCase(), 600, 450);
+
+            // Add subtitle
+            ctx.font = '24px Arial';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+            ctx.fillText('Portfolio Project Showcase', 600, 500);
+
+            // Add border
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+            ctx.lineWidth = 4;
+            ctx.strokeRect(20, 20, 1160, 760);
+
+            return canvas;
+        }
+
+        function generateTestimonialImage(testimonial) {
+            const canvas = createCanvas(400, 400);
+            const ctx = canvas.getContext('2d');
+
+            // Circular avatar
+            ctx.fillStyle = testimonial.color;
+            ctx.beginPath();
+            ctx.arc(200, 200, 180, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Add initial
+            ctx.font = 'bold 150px Arial';
+            ctx.fillStyle = 'white';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(testimonial.name[0].toUpperCase(), 200, 210);
+
+            // Add border
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = 8;
+            ctx.beginPath();
+            ctx.arc(200, 200, 180, 0, Math.PI * 2);
+            ctx.stroke();
+
+            return canvas;
+        }
+
+        function generateProfileImage() {
+            const canvas = createCanvas(800, 800);
+            const ctx = canvas.getContext('2d');
+
+            // Gradient background
+            const gradient = ctx.createRadialGradient(400, 400, 100, 400, 400, 400);
+            gradient.addColorStop(0, '#00ff88');
+            gradient.addColorStop(1, '#0066ff');
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            ctx.arc(400, 400, 350, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Add icon
+            ctx.font = 'bold 250px Arial';
+            ctx.fillStyle = 'white';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('👨‍💻', 400, 420);
+
+            // Add border
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = 12;
+            ctx.beginPath();
+            ctx.arc(400, 400, 350, 0, Math.PI * 2);
+            ctx.stroke();
+
+            return canvas;
+        }
+
+        function downloadCanvas(canvas, filename) {
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        async function generateAllImages() {
+            const container = document.getElementById('canvasContainer');
+            const status = document.getElementById('status');
+            container.innerHTML = '';
+            
+            let generated = [];
+
+            // Generate project images
+            status.innerHTML = '<h3>Generating project images...</h3>';
+            for (const project of projects) {
+                const canvas = generateProjectImage(project);
+                container.appendChild(canvas);
+                downloadCanvas(canvas, `${project.name}.jpg`);
+                generated.push(`${project.name}.jpg`);
+                await new Promise(resolve => setTimeout(resolve, 300));
+            }
+
+            // Generate testimonial images
+            status.innerHTML += '<h3>Generating testimonial images...</h3>';
+            for (const testimonial of testimonials) {
+                const canvas = generateTestimonialImage(testimonial);
+                container.appendChild(canvas);
+                downloadCanvas(canvas, `${testimonial.name}.jpg`);
+                generated.push(`${testimonial.name}.jpg`);
+                await new Promise(resolve => setTimeout(resolve, 300));
+            }
+
+            // Generate profile image
+            status.innerHTML += '<h3>Generating profile image...</h3>';
+            const profileCanvas = generateProfileImage();
+            container.appendChild(profileCanvas);
+            downloadCanvas(profileCanvas, 'profile.jpg');
+            generated.push('profile.jpg');
+
+            status.innerHTML += `
+                <h2 style="color: #00ff88;">✅ Generated ${generated.length} images!</h2>
+                <p>Images have been downloaded to your Downloads folder.</p>
+                <h3>Next Steps:</h3>
+                <ol>
+                    <li>Move project images to: <code>assets/images/projects/</code></li>
+                    <li>Move testimonial images to: <code>assets/images/testimonials/</code></li>
+                    <li>Move profile image to: <code>assets/images/profile.jpg</code></li>
+                </ol>
+                <p><strong>Or run this command:</strong></p>
+                <code style="display: block; background: #1e1e1e; padding: 10px; border-radius: 5px;">
+                cd ~/Downloads<br>
+                mv shopify-*.jpg figma-*.jpg fitness-*.jpg saas-*.jpg fullstack-*.jpg brand-*.jpg ~/shadrack-portfolio-pro/assets/images/projects/<br>
+                mv sarah.jpg michael.jpg emma.jpg ~/shadrack-portfolio-pro/assets/images/testimonials/<br>
+                mv profile.jpg ~/shadrack-portfolio-pro/assets/images/
+                </code>
+            `;
+        }
+    </script>
+</body>
+</html>

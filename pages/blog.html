@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Technical blog articles on web development, Shopify, and Figma - Shadrack Wangai Maina">
+    <title>Tech Blog | Shadrack Maina</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/icons/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/pages.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../index.html">
+                    <span class="brand-text">Shadrack<span class="highlight">Maina</span></span>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="../index.html" class="btn-back">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content" data-aos="fade-up">
+                <h1 class="page-title">Technical <span class="highlight">Blog</span></h1>
+                <p class="page-subtitle">Insights on web development, e-commerce, and design</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Filter -->
+    <section class="blog-filter">
+        <div class="container">
+            <div class="filter-buttons" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All Articles</button>
+                <button class="filter-btn" data-filter="shopify">Shopify</button>
+                <button class="filter-btn" data-filter="figma">Figma/Design</button>
+                <button class="filter-btn" data-filter="development">Web Development</button>
+                <button class="filter-btn" data-filter="performance">Performance</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="featured-article">
+        <div class="container">
+            <div class="article-featured" data-aos="fade-up">
+                <div class="featured-badge">
+                    <i class="fas fa-star"></i> Featured Article
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-date"><i class="far fa-calendar"></i> December 15, 2023</span>
+                        <span class="article-category shopify"><i class="fab fa-shopify"></i> Shopify</span>
+                        <span class="article-read-time"><i class="far fa-clock"></i> 12 min read</span>
+                    </div>
+                    <h2 class="article-title">Mastering Shopify 2.0: Building Custom Sections with JSON Templates</h2>
+                    <p class="article-excerpt">
+                        An in-depth guide to building powerful, reusable custom sections in Shopify 2.0 using JSON templates, 
+                        Liquid, and modern JavaScript. Learn how to create dynamic, merchant-friendly sections that enhance 
+                        the customization experience.
+                    </p>
+                    <div class="article-tags">
+                        <span class="tag">Shopify 2.0</span>
+                        <span class="tag">Liquid</span>
+                        <span class="tag">JSON Schema</span>
+                        <span class="tag">Theme Development</span>
+                    </div>
+                    <a href="#article1" class="btn-read-more">
+                        Read Full Article <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="article-image">
+                    <img src="../assets/images/blog/shopify-sections.jpg" alt="Shopify 2.0 Custom Sections">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Articles Grid -->
+    <section class="blog-articles">
+        <div class="container">
+            <div class="articles-grid">
+                
+                <!-- Article 1: Shopify Advanced -->
+                <article class="blog-card" data-category="shopify" data-aos="fade-up">
+                    <div class="blog-thumbnail">
+                        <img src="../assets/images/blog/shopify-performance.jpg" alt="Shopify Performance">
+                        <div class="blog-overlay">
+                            <a href="#article2" class="btn-view-article">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> November 28, 2023</span>
+                            <span class="blog-category shopify"><i class="fab fa-shopify"></i> Shopify</span>
+                        </div>
+                        <h3 class="blog-title">Optimizing Shopify Store Performance: Speed Optimization Techniques</h3>
+                        <p class="blog-excerpt">
+                            Learn advanced techniques to optimize your Shopify store's performance. From lazy loading and 
+                            image optimization to reducing JavaScript bundle sizes and implementing efficient caching strategies.
+                        </p>
+                        <div class="blog-stats">
+                            <span><i class="far fa-clock"></i> 10 min read</span>
+                            <span><i class="far fa-eye"></i> 2.3K views</span>
+                            <span><i class="far fa-comment"></i> 45 comments</span>
+                        </div>
+                        <div class="blog-tags">
+                            <span class="tag">Performance</span>
+                            <span class="tag">Optimization</span>
+                            <span class="tag">Core Web Vitals</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2: Figma Design Systems -->
+                <article class="blog-card" data-category="figma" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-thumbnail">
+                        <img src="../assets/images/blog/figma-design-systems.jpg" alt="Figma Design Systems">
+                        <div class="blog-overlay">
+                            <a href="#article3" class="btn-view-article">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> November 15, 2023</span>
+                            <span class="blog-category design"><i class="fas fa-palette"></i> Design</span>
+                        </div>
+                        <h3 class="blog-title">Building Scalable Design Systems in Figma: A Comprehensive Guide</h3>
+                        <p class="blog-excerpt">
+                            Master the art of creating scalable design systems in Figma. Learn about component variants, 
+                            auto-layout, design tokens, and how to maintain consistency across large design teams.
+                        </p>
+                        <div class="blog-stats">
+                            <span><i class="far fa-clock"></i> 15 min read</span>
+                            <span><i class="far fa-eye"></i> 3.1K views</span>
+                            <span><i class="far fa-comment"></i> 67 comments</span>
+                        </div>
+                        <div class="blog-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">Design Systems</span>
+                            <span class="tag">Components</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 3: Modern JavaScript -->
+                <article class="blog-card" data-category="development" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-thumbnail">
+                        <img src="../assets/images/blog/modern-javascript.jpg" alt="Modern JavaScript">
+                        <div class="blog-overlay">
+                            <a href="#article4" class="btn-view-article">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> October 30, 2023</span>
+                            <span class="blog-category development"><i class="fas fa-code"></i> Development</span>
+                        </div>
+                        <h3 class="blog-title">Modern JavaScript Best Practices: Writing Clean and Maintainable Code</h3>
+                        <p class="blog-excerpt">
+                            Explore modern JavaScript best practices including ES6+ features, async/await patterns, error handling, 
+                            and writing clean, maintainable code that scales with your project.
+                        </p>
+                        <div class="blog-stats">
+                            <span><i class="far fa-clock"></i> 14 min read</span>
+                            <span><i class="far fa-eye"></i> 4.5K views</span>
+                            <span><i class="far fa-comment"></i> 89 comments</span>
+                        </div>
+                        <div class="blog-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">ES6+</span>
+                            <span class="tag">Best Practices</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 4: Shopify App Development -->
+                <article class="blog-card" data-category="shopify" data-aos="fade-up" data-aos-delay="300">
+                    <div class="blog-thumbnail">
+                        <img src="../assets/images/blog/shopify-apps.jpg" alt="Shopify App Development">
+                        <div class="blog-overlay">
+                            <a href="#article5" class="btn-view-article">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> October 12, 2023</span>
+                            <span class="blog-category shopify"><i class="fab fa-shopify"></i> Shopify</span>
+                        </div>
+                        <h3 class="blog-title">Building Custom Shopify Apps: From Concept to App Store</h3>
+                        <p class="blog-excerpt">
+                            A complete guide to building custom Shopify apps using Node.js, React, and Shopify's Polaris design system. 
+                            Learn about authentication, API integration, webhooks, and app store submission.
+                        </p>
+                        <div class="blog-stats">
+                            <span><i class="far fa-clock"></i> 18 min read</span>
+                            <span><i class="far fa-eye"></i> 2.8K views</span>
+                            <span><i class="far fa-comment"></i> 52 comments</span>
+                        </div>
+                        <div class="blog-tags">
+                            <span class="tag">Shopify Apps</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">React</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 5: Figma to Code -->
+                <article class="blog-card" data-category="figma" data-aos="fade-up" data-aos-delay="400">
+                    <div class="blog-thumbnail">
+                        <img src="../assets/images/blog/figma-to-code.jpg" alt="Figma to Code">
+                        <div class="blog-overlay">
+                            <a href="#article6" class="btn-view-article">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> September 25, 2023</span>
+                            <span class="blog-category design"><i class="fas fa-palette"></i> Design</span>
+                        </div>
+                        <h3 class="blog-title">From Figma to Code: Efficient Design-to-Development Workflow</h3>
+                        <p class="blog-excerpt">
+                            Streamline your design-to-development workflow with practical tips for converting Figma designs to 
+                            production-ready code. Learn about developer handoff, design tokens, and automated code generation.
+                        </p>
+                        <div class="blog-stats">
+                            <span><i class="far fa-clock"></i> 11 min read</span>
+                            <span><i class="far fa-eye"></i> 3.7K views</span>
+                            <span><i class="far fa-comment"></i> 74 comments</span>
+                        </div>
+                        <div class="blog-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">Workflow</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 6: Web Performance -->
+                <article class="blog-card" data-category="performance" data-aos="fade-up" data-aos-delay="500">
+                    <div class="blog-thumbnail">
+                        <img src="../assets/images/blog/web-performance.jpg" alt="Web Performance">
+                        <div class="blog-overlay">
+                            <a href="#article7" class="btn-view-article">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> September 10, 2023</span>
+                            <span class="blog-category development"><i class="fas fa-tachometer-alt"></i> Performance</span>
+                        </div>
+                        <h3 class="blog-title">Mastering Core Web Vitals: A Developer's Guide to Web Performance</h3>
+                        <p class="blog-excerpt">
+                            Deep dive into Core Web Vitals (LCP, FID, CLS) and learn practical strategies to improve your website's 
+                            performance metrics. Includes real-world examples and measurement techniques.
+                        </p>
+                        <div class="blog-stats">
+                            <span><i class="far fa-clock"></i> 16 min read</span>
+                            <span><i class="far fa-eye"></i> 5.2K views</span>
+                            <span><i class="far fa-comment"></i> 103 comments</span>
+                        </div>
+                        <div class="blog-tags">
+                            <span class="tag">Performance</span>
+                            <span class="tag">Core Web Vitals</span>
+                            <span class="tag">SEO</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Articles Content -->
+    <section class="article-details">
+        <div class="container">
+            
+            <!-- Article 1: Shopify 2.0 Sections -->
+            <div class="article-detail" id="article1">
+                <div class="article-header" data-aos="fade-up">
+                    <span class="article-category shopify"><i class="fab fa-shopify"></i> Shopify Development</span>
+                    <h1 class="article-detail-title">Mastering Shopify 2.0: Building Custom Sections with JSON Templates</h1>
+                    <div class="article-author-info">
+                        <img src="../assets/images/profile/shadrack.jpg" alt="Shadrack Maina" class="author-avatar">
+                        <div class="author-details">
+                            <h4>Shadrack Wangai Maina</h4>
+                            <p>Shopify Expert & Full Stack Developer</p>
+                        </div>
+                        <div class="article-meta-inline">
+                            <span><i class="far fa-calendar"></i> December 15, 2023</span>
+                            <span><i class="far fa-clock"></i> 12 min read</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-body" data-aos="fade-up">
+                    <h2>Introduction</h2>
+                    <p>
+                        Shopify 2.0 introduced a revolutionary approach to theme development with JSON templates and enhanced 
+                        section capabilities. This guide will walk you through creating powerful, reusable custom sections that 
+                        merchants can easily customize without touching code.
+                    </p>
+
+                    <h2>Understanding Shopify 2.0 Architecture</h2>
+                    <p>
+                        The core of Shopify 2.0 lies in its flexible section-based architecture. Unlike the traditional theme 
+                        structure, Shopify 2.0 allows sections to be added anywhere on any page using JSON templates. This 
+                        provides unprecedented flexibility for merchants.
+                    </p>
+
+                    <h3>Key Features of Shopify 2.0:</h3>
+                    <ul>
+                        <li><strong>Section Groups:</strong> Organize sections into logical groups for better content management</li>
+                        <li><strong>App Blocks:</strong> Third-party apps can now inject content into any section</li>
+                        <li><strong>Metafields:</strong> Enhanced support for dynamic content from metafields</li>
+                        <li><strong>JSON Templates:</strong> Complete page structure defined in JSON format</li>
+                    </ul>
+
+                    <h2>Building Your First Custom Section</h2>
+                    <p>
+                        Let's create a flexible hero section with multiple layout options, dynamic content, and full customization 
+                        capabilities. This section will demonstrate advanced schema features and Liquid templating.
+                    </p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-title">sections/custom-hero.liquid</span>
+                            <button class="copy-code"><i class="far fa-copy"></i> Copy</button>
+                        </div>
+                        <pre><code>{% schema %}
+{
+  "name": "Custom Hero Section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout Style",
+      "options": [
+        { "value": "full", "label": "Full Width" },
+        { "value": "split", "label": "Split Layout" },
+        { "value": "overlay", "label": "Image Overlay" }
+      ],
+      "default": "full"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Welcome to Our Store"
+    }
+  ]
+}
+{% endschema %}</code></pre>
+                    </div>
+
+                    <h2>Advanced Schema Configuration</h2>
+                    <p>
+                        The schema is where the magic happens. It defines all customizable settings that merchants can control 
+                        through the theme editor. Understanding schema types and their capabilities is crucial for creating 
+                        flexible sections.
+                    </p>
+
+                    <h3>Best Practices for Schema Design:</h3>
+                    <ol>
+                        <li>Group related settings using headers and info blocks</li>
+                        <li>Provide sensible defaults for all settings</li>
+                        <li>Use clear, descriptive labels and help text</li>
+                        <li>Leverage conditional settings to reduce complexity</li>
+                        <li>Test thoroughly with different content lengths</li>
+                    </ol>
+
+                    <h2>Performance Optimization Tips</h2>
+                    <p>
+                        Custom sections should be optimized for performance. Here are key strategies to ensure your sections 
+                        load quickly and don't impact Core Web Vitals:
+                    </p>
+
+                    <ul>
+                        <li>Lazy load images using native loading="lazy" attribute</li>
+                        <li>Minimize inline JavaScript; use theme.js for shared functionality</li>
+                        <li>Implement CSS containment for better rendering performance</li>
+                        <li>Use Shopify's image filters for responsive images</li>
+                        <li>Avoid unnecessary Liquid loops and complex logic</li>
+                    </ul>
+
+                    <h2>Conclusion</h2>
+                    <p>
+                        Mastering Shopify 2.0's section architecture opens up endless possibilities for creating flexible, 
+                        merchant-friendly themes. By following these best practices and understanding the power of JSON 
+                        templates, you can build themes that are both powerful and easy to customize.
+                    </p>
+
+                    <div class="article-cta">
+                        <h3>Ready to Build Your Shopify Store?</h3>
+                        <p>Let's work together to create an exceptional e-commerce experience.</p>
+                        <a href="../index.html#contact" class="btn-primary">Get In Touch</a>
+                    </div>
+                </div>
+
+                <div class="article-footer" data-aos="fade-up">
+                    <div class="article-tags-list">
+                        <span class="tag">Shopify 2.0</span>
+                        <span class="tag">Liquid</span>
+                        <span class="tag">JSON Schema</span>
+                        <span class="tag">Theme Development</span>
+                        <span class="tag">E-commerce</span>
+                    </div>
+                    <div class="article-share">
+                        <h4>Share this article:</h4>
+                        <div class="share-buttons">
+                            <a href="#" class="share-btn twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="share-btn linkedin"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="share-btn facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="share-btn reddit"><i class="fab fa-reddit"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Newsletter Subscribe -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-box" data-aos="zoom-in">
+                <div class="newsletter-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h2>Subscribe to My Newsletter</h2>
+                <p>Get the latest articles, tutorials, and insights delivered directly to your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn-subscribe">Subscribe <i class="fas fa-paper-plane"></i></button>
+                </form>
+                <p class="newsletter-note">No spam. Unsubscribe anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Articles -->
+    <section class="related-articles">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Related <span class="highlight">Articles</span></h2>
+            </div>
+            <div class="related-grid">
+                <div class="related-card" data-aos="fade-up">
+                    <span class="related-category">Shopify</span>
+                    <h3>Shopify Liquid Filters Every Developer Should Know</h3>
+                    <span class="related-date">5 min read</span>
+                </div>
+                <div class="related-card" data-aos="fade-up" data-aos-delay="100">
+                    <span class="related-category">Design</span>
+                    <h3>Creating Responsive Layouts with CSS Grid</h3>
+                    <span class="related-date">8 min read</span>
+                </div>
+                <div class="related-card" data-aos="fade-up" data-aos-delay="200">
+                    <span class="related-category">JavaScript</span>
+                    <h3>Understanding Async/Await in Modern JavaScript</h3>
+                    <span class="related-date">10 min read</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Shadrack Wangai Maina. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/shadrackmaina" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/shadrackmaina" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:shaddihmaina15@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+
+        // Blog Filter Functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const blogCards = document.querySelectorAll('.blog-card');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                blogCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

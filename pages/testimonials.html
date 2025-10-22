@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Testimonials - Shadrack Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        /* Hero Section */
+        .testimonials-hero {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%);
+            color: white;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .testimonials-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .testimonials-hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat .number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-stat .label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Main Container */
+        .testimonials-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Section Heading */
+        .section-heading {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-heading h2 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .section-heading p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.95);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-tab {
+            background: white;
+            border: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            color: #333;
+        }
+
+        .filter-tab:hover,
+        .filter-tab.active {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Testimonials Grid */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .testimonial-card.featured {
+            border: 3px solid #667eea;
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .quote-icon {
+            font-size: 3rem;
+            color: #667eea;
+            opacity: 0.15;
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+        }
+
+        .rating {
+            display: flex;
+            gap: 0.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .rating i {
+            color: #ffd700;
+            font-size: 1.2rem;
+        }
+
+        .testimonial-text {
+            font-size: 1.05rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            font-style: italic;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .client-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .client-details h4 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 0.3rem;
+        }
+
+        .client-position {
+            color: #667eea;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .client-company {
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .project-tag {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            color: #667eea;
+            padding: 0.4rem 0.9rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Video Testimonials Section */
+        .video-testimonials-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .video-testimonials-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 3rem;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .video-card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .video-card:hover {
+            transform: scale(1.03);
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #667eea;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+        }
+
+        .video-card:hover .play-button {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+        }
+
+        .video-info {
+            padding: 1.5rem;
+            background: white;
+        }
+
+        .video-info h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .video-info p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Case Studies Section */
+        .case-studies-section {
+            margin: 4rem 0;
+        }
+
+        .case-study-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .case-study-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .case-study-title {
+            flex: 1;
+        }
+
+        .case-study-title h3 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-study-title .client-name {
+            color: #667eea;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .case-metrics {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .metric {
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
+            display: block;
+        }
+
+        .metric-label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .case-challenge {
+            background: #f8f9ff;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #667eea;
+        }
+
+        .case-challenge h4 {
+            color: #333;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .case-challenge p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .case-solution {
+            margin-bottom: 1.5rem;
+        }
+
+        .case-solution h4 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .solution-points {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .solution-points li {
+            padding: 1rem;
+            background: #f8f9ff;
+            border-radius: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+
+        .solution-points i {
+            color: #667eea;
+            margin-top: 0.2rem;
+            font-size: 1.2rem;
+        }
+
+        .case-testimonial {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            font-style: italic;
+            position: relative;
+        }
+
+        .case-testimonial::before {
+            content: '"';
+            font-size: 4rem;
+            color: #667eea;
+            opacity: 0.3;
+            position: absolute;
+            top: 0.5rem;
+            left: 1rem;
+        }
+
+        .case-testimonial p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            padding-left: 2rem;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .stats-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 3rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .stat-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2rem;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* Industry Testimonials */
+        .industry-section {
+            margin: 4rem 0;
+        }
+
+        .industry-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .industry-tab {
+            background: white;
+            border: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .industry-tab:hover,
+        .industry-tab.active {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        /* Platform Reviews */
+        .platform-reviews-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .platform-reviews-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 3rem;
+        }
+
+        .platforms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .platform-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 15px;
+            background: #f8f9ff;
+            transition: all 0.3s;
+        }
+
+        .platform-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .platform-logo {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .platform-name {
+            font-size: 1.3rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .platform-rating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .platform-rating .stars {
+            color: #ffd700;
+            font-size: 1.5rem;
+        }
+
+        .platform-rating .score {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .platform-reviews-count {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.95), rgba(118, 75, 162, 0.95));
+            border-radius: 20px;
+            padding: 4rem 2rem;
+            text-align: center;
+            color: white;
+            margin: 4rem 0;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .cta-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-btn-primary {
+            background: white;
+            color: #667eea;
+            border: none;
+        }
+
+        .cta-btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(255,255,255,0.3);
+        }
+
+        .cta-btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 2rem;
+            text-align: center;
+            color: #666;
+            margin-top: 4rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: #667eea;
+            font-size: 1.5rem;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+            color: #764ba2;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .testimonials-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-heading h2 {
+                font-size: 2rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                gap: 1.5rem !important;
+            }
+
+            .case-study-header {
+                flex-direction: column;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="technologies.html">Technologies</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="testimonials-hero">
+        <h1 data-aos="fade-down">Client Testimonials</h1>
+        <p class="subtitle" data-aos="fade-up" data-aos-delay="100">
+            Real Feedback from Real Clients Who Achieved Real Results
+        </p>
+        <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
+            <div class="hero-stat">
+                <span class="number">150+</span>
+                <span class="label">Happy Clients</span>
+            </div>
+            <div class="hero-stat">
+                <span class="number">4.9/5</span>
+                <span class="label">Average Rating</span>
+            </div>
+            <div class="hero-stat">
+                <span class="number">98%</span>
+                <span class="label">Satisfaction Rate</span>
+            </div>
+            <div class="hero-stat">
+                <span class="number">200+</span>
+                <span class="label">5-Star Reviews</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="testimonials-container">
+        <!-- Filter Tabs -->
+        <div class="filter-tabs" data-aos="fade-up">
+            <button class="filter-tab active" data-filter="all">All Reviews</button>
+            <button class="filter-tab" data-filter="ecommerce">E-commerce</button>
+            <button class="filter-tab" data-filter="webapp">Web Apps</button>
+            <button class="filter-tab" data-filter="design">Design</button>
+            <button class="filter-tab" data-filter="maintenance">Support</button>
+        </div>
+
+        <!-- Main Testimonials Section -->
+        <section class="section-heading" data-aos="fade-up">
+            <h2>What Clients Say</h2>
+            <p>Authentic testimonials from clients across various industries who have experienced exceptional results working with me.</p>
+        </section>
+
+        <div class="testimonials-grid">
+            <!-- Featured Testimonial 1 -->
+            <div class="testimonial-card featured" data-category="ecommerce" data-aos="fade-up" data-aos-delay="0">
+                <span class="featured-badge">⭐ FEATURED</span>
+                <i class="fas fa-quote-right quote-icon"></i>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "Working with Shadrack was an absolute game-changer for our business. He transformed our outdated Shopify store into a high-converting, modern e-commerce platform that increased our revenue by 187% in just three months. His attention to detail, technical expertise, and understanding of user experience is unmatched. Beyond the technical skills, his communication was clear and proactive throughout the entire project."
+                </p>
+                <div class="client-info">
+                    <div class="client-avatar">JM</div>
+                    <div class="client-details">
+                        <h4>Jennifer Martinez</h4>
+                        <p class="client-position">CEO & Founder</p>
+                        <p class="client-company">Luxe Fashion Boutique</p>
+                    </div>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Shopify</span>
+                    <span class="project-tag">E-commerce</span>
+                    <span class="project-tag">Custom Theme</span>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card" data-category="webapp" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "Shadrack developed a complex React application for our SaaS platform that handles thousands of users daily. The code quality is exceptional, the application is blazing fast, and the UI is intuitive. He delivered ahead of schedule and stayed within budget. I've worked with many developers, but Shadrack stands out for his professionalism and technical prowess."
+                </p>
+                <div class="client-info">
+                    <div class="client-avatar">DK</div>
+                    <div class="client-details">
+                        <h4>David Kim</h4>
+                        <p class="client-position">CTO</p>
+                        <p class="client-company">TechFlow Solutions</p>
+                    </div>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">React</span>
+                    <span class="project-tag">Node.js</span>
+                    <span class="project-tag">SaaS</span>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card" data-category="design" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "The UI/UX design Shadrack created for our mobile app exceeded all expectations. He has an incredible eye for design and understands how to create interfaces that are both beautiful and functional. The Figma prototypes he delivered were so detailed that our development team had zero questions during implementation. User engagement increased by 65% after launch!"
+                </p>
+                <div class="client-info">
+                    <div class="client-avatar">SB</div>
+                    <div class="client-details">
+                        <h4>Sarah Brown</h4>
+                        <p class="client-position">Product Manager</p>
+                        <p class="client-company">HealthTech Innovations</p>
+                    </div>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Figma</span>
+                    <span class="project-tag">UI/UX</span>
+                    <span class="project-tag">Mobile Design</span>
+                </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-card" data-category="ecommerce" data-aos="fade-up" data-aos-delay="0">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "Shadrack migrated our entire e-commerce operation from WooCommerce to Shopify seamlessly. Not a single order was lost during the transition, and our site is now faster and more reliable than ever. His project management skills and technical knowledge made what could have been a nightmare into a smooth experience. Highly recommended!"
+                </p>
+                <div class="client-info">
+                    <div class="client-avatar">MC</div>
+                    <div class="client-details">
+                        <h4>Michael Chen</h4>
+                        <p class="client-position">E-commerce Director</p>
+                        <p class="client-company">Global Gadgets Inc.</p>
+                    </div>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Migration</span>
+                    <span class="project-tag">Shopify</span>
+                    <span class="project-tag">E-commerce</span>
+                </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="testimonial-card" data-category="webapp" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "Our custom booking platform handles complex scheduling for multiple locations and staff members. Shadrack built a robust solution that integrates with our payment processor, sends automated notifications, and provides detailed analytics. The dashboard he created makes management effortless. Outstanding work from start to finish!"
+                </p>
+                <div class="client-info">
+                    <div class="client-avatar">EG</div>
+                    <div class="client-details">
+                        <h4>Emily Garcia</h4>
+                        <p class="client-position">Operations Manager</p>
+                        <p class="client-company">Wellness Centers Network</p>
+                    </div>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Custom Development</span>
+                    <span class="project-tag">Booking System</span>
+                    <span class="project-tag">API Integration</span>
+                </div>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div class="testimonial-card" data-category="maintenance" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "We've been using Shadrack's maintenance services for over a year, and our website has never been more stable. He proactively monitors our site, updates plugins, and fixes issues before we even notice them. His response time is incredible - usually within hours, even on weekends. Worth every penny for the peace of mind!"
+                </p>
+                <div class="client-info">
+                    <div class="client-avatar">RT</div>
+                    <div class="client-details">
+                        <h4>Robert Taylor</h4>
+                        <p class="client-position">Owner</p>
+                        <p class="client-company">Taylor Consulting Group</p>
+                    </div>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Maintenance</span>
+                    <span class="project-tag">Support</span>
+                    <span class="project-tag">WordPress</span>
+                </div>
+            </div>
+
+            <!-- Testimonial 7 -->
+            <div class="testimonial-card featured" data-category="design" data-aos="fade-up" data-aos-delay="0">
+                <span class="featured-badge">⭐ FEATURED</span>
+                <i class="fas fa-quote-right quote-icon"></i>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "Shadrack completely redesigned our brand identity and website. The new design is modern, professional, and perfectly captures our company's vision. Our bounce rate decreased by 40% and time on site increased by 85%. Multiple visitors have complimented us on the website. He's a true design professional who understands both aesthetics and business goals."
+                </p>
+                <div class="client-info">
+                    <div class="client-avatar">AL</div>
+                    <div class="client-details">
+                        <h4>Amanda Lee</h4>
+                        <p class="client-position">Marketing Director</p>
+                        <p class="client-company">Green Energy Solutions</p>
+                    </div>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Branding</span>
+                    <span class="project-tag">Web Design</span>
+                    <span class="project-tag">Redesign</span>
+                </div>
+            </div>
+
+            <!-- Testimonial 8 -->
+            <div class="testimonial-card" data-category="ecommerce" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "We needed a Shopify app to handle our complex product customization options. Shadrack built exactly what we needed - it's user-friendly for customers and integrates perfectly with our fulfillment process. He also provided excellent documentation and training. The app has become a key differentiator for our business."
+                </p>
+                <div class="client-info">
+                    <div class="client-avatar">JW</div>
+                    <div class="client-details">
+                        <h4>James Wilson</h4>
+                        <p class="client-position">Co-Founder</p>
+                        <p class="client-company">Custom Print Studio</p>
+                    </div>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Shopify App</span>
+                    <span class="project-tag">Customization</span>
+                    <span class="project-tag">Integration</span>
+                </div>
+            </div>
+
+            <!-- Testimonial 9 -->
+            <div class="testimonial-card" data-category="webapp" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "Shadrack optimized our web application's performance and the results are incredible. Page load times decreased from 8 seconds to under 2 seconds. He identified and fixed bottlenecks we didn't even know existed. Our Core Web Vitals scores are now all in the green, and our Google rankings improved significantly as a result."
+                </p>
+                <div class="client-info">
+                    <div class="client-avatar">LP</div>
+                    <div class="client-details">
+                        <h4>Lisa Peterson</h4>
+                        <p class="client-position">Tech Lead</p>
+                        <p class="client-company">DataViz Analytics</p>
+                    </div>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Performance</span>
+                    <span class="project-tag">Optimization</span>
+                    <span class="project-tag">SEO</span>
+                </div>
+            </div>
+
+            <!-- Testimonial 10 -->
+            <div class="testimonial-card" data-category="design" data-aos="fade-up" data-aos-delay="0">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "The design system Shadrack created in Figma has transformed how our team works. Components are well-organized, documentation is thorough, and everything is perfectly structured. Our design-to-development handoff time has been cut in half. He also trained our team on best practices, which has been invaluable."
+                </p>
+                <div class="client-info">
+                    <div class="client-avatar">NK</div>
+                    <div class="client-details">
+                        <h4>Nathan Kumar</h4>
+                        <p class="client-position">Design Manager</p>
+                        <p class="client-company">Fintech Innovations</p>
+                    </div>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Design System</span>
+                    <span class="project-tag">Figma</span>
+                    <span class="project-tag">Documentation</span>
+                </div>
+            </div>
+
+            <!-- Testimonial 11 -->
+            <div class="testimonial-card" data-category="ecommerce" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "Our subscription-based e-commerce model required complex logic and integrations. Shadrack handled everything - from recurring billing to automated fulfillment workflows. The system works flawlessly, and our churn rate has decreased thanks to the smooth customer experience he designed. Exceptional developer!"
+                </p>
+                <div class="client-info">
+                    <div class="client-avatar">CF</div>
+                    <div class="client-details">
+                        <h4>Carlos Fernandez</h4>
+                        <p class="client-position">Founder</p>
+                        <p class="client-company">Monthly Box Co.</p>
+                    </div>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Subscriptions</span>
+                    <span class="project-tag">E-commerce</span>
+                    <span class="project-tag">Automation</span>
+                </div>
+            </div>
+
+            <!-- Testimonial 12 -->
+            <div class="testimonial-card" data-category="maintenance" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "When our website was hacked, Shadrack responded immediately. He cleaned the malware, secured our site, and implemented comprehensive security measures. Now he maintains our site monthly and we haven't had a single issue since. His proactive approach to security gives us complete confidence."
+                </p>
+                <div class="client-info">
+                    <div class="client-avatar">PJ</div>
+                    <div class="client-details">
+                        <h4>Patricia Johnson</h4>
+                        <p class="client-position">CEO</p>
+                        <p class="client-company">Legal Advisory Partners</p>
+                    </div>
+                </div>
+                <div class="project-tags">
+                    <span class="project-tag">Security</span>
+                    <span class="project-tag">Maintenance</span>
+                    <span class="project-tag">Emergency Fix</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video Testimonials Section -->
+        <section class="video-testimonials-section" data-aos="fade-up">
+            <h2>Video Testimonials</h2>
+            <div class="video-grid">
+                <div class="video-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="video-thumbnail">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Jennifer Martinez - Luxe Fashion Boutique</h3>
+                        <p>"How Shadrack increased our revenue by 187% in 3 months"</p>
+                    </div>
+                </div>
+
+                <div class="video-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="video-thumbnail">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>David Kim - TechFlow Solutions</h3>
+                        <p>"Building a scalable SaaS platform with exceptional performance"</p>
+                    </div>
+                </div>
+
+                <div class="video-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="video-thumbnail">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Sarah Brown - HealthTech Innovations</h3>
+                        <p>"Designing a user experience that increased engagement by 65%"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies Section -->
+        <section class="case-studies-section">
+            <div class="section-heading" data-aos="fade-up">
+                <h2>Success Stories</h2>
+                <p>Deep dives into transformative projects that delivered exceptional business results.</p>
+            </div>
+
+            <!-- Case Study 1 -->
+            <div class="case-study-card" data-aos="fade-up">
+                <div class="case-study-header">
+                    <div class="case-study-title">
+                        <h3>E-commerce Revenue Transformation</h3>
+                        <p class="client-name">Luxe Fashion Boutique</p>
+                    </div>
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <span class="metric-value">187%</span>
+                            <span class="metric-label">Revenue Increase</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">3.2x</span>
+                            <span class="metric-label">Conversion Rate</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">-42%</span>
+                            <span class="metric-label">Cart Abandonment</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-challenge">
+                    <h4>The Challenge</h4>
+                    <p>Luxe Fashion Boutique was struggling with an outdated Shopify theme that had poor mobile experience, slow load times, and a confusing checkout process. Their conversion rate was 1.2% and cart abandonment was at 78%. They needed a complete overhaul to compete in the competitive fashion e-commerce space.</p>
+                </div>
+
+                <div class="case-solution">
+                    <h4>The Solution</h4>
+                    <ul class="solution-points">
+                        <li><i class="fas fa-check-circle"></i> Designed and developed a custom Shopify 2.0 theme with mobile-first approach</li>
+                        <li><i class="fas fa-check-circle"></i> Implemented optimized image loading and lazy loading for 3x faster page speeds</li>
+                        <li><i class="fas fa-check-circle"></i> Streamlined checkout process from 5 steps to 2 steps</li>
+                        <li><i class="fas fa-check-circle"></i> Added intelligent product recommendations using AI</li>
+                        <li><i class="fas fa-check-circle"></i> Integrated advanced filtering and search functionality</li>
+                        <li><i class="fas fa-check-circle"></i> Implemented exit-intent popups with personalized offers</li>
+                    </ul>
+                </div>
+
+                <div class="case-testimonial">
+                    <p>"The transformation Shadrack delivered was beyond our wildest expectations. Not only did he create a stunning website, but the business results speak for themselves. Our revenue nearly tripled in just three months. His expertise in both design and e-commerce strategy made all the difference." - Jennifer Martinez, CEO</p>
+                </div>
+            </div>
+
+            <!-- Case Study 2 -->
+            <div class="case-study-card" data-aos="fade-up">
+                <div class="case-study-header">
+                    <div class="case-study-title">
+                        <h3>SaaS Platform Performance Overhaul</h3>
+                        <p class="client-name">TechFlow Solutions</p>
+                    </div>
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <span class="metric-value">75%</span>
+                            <span class="metric-label">Load Time Reduction</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">10K+</span>
+                            <span class="metric-label">Active Users</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">99.9%</span>
+                            <span class="metric-label">Uptime</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-challenge">
+                    <h4>The Challenge</h4>
+                    <p>TechFlow needed a robust React-based SaaS platform that could handle thousands of concurrent users while providing real-time data updates. The existing solution was slow, difficult to scale, and lacked the modern features users expected. They needed a complete rebuild with enterprise-level performance.</p>
+                </div>
+
+                <div class="case-solution">
+                    <h4>The Solution</h4>
+                    <ul class="solution-points">
+                        <li><i class="fas fa-check-circle"></i> Built scalable React application with Redux for state management</li>
+                        <li><i class="fas fa-check-circle"></i> Implemented WebSocket connections for real-time updates</li>
+                        <li><i class="fas fa-check-circle"></i> Developed RESTful API with Node.js and PostgreSQL</li>
+                        <li><i class="fas fa-check-circle"></i> Optimized database queries reducing load times by 75%</li>
+                        <li><i class="fas fa-check-circle"></i> Implemented comprehensive caching strategy</li>
+                        <li><i class="fas fa-check-circle"></i> Set up CI/CD pipeline for automated testing and deployment</li>
+                    </ul>
+                </div>
+
+                <div class="case-testimonial">
+                    <p>"Shadrack's technical expertise is world-class. He built us a platform that not only meets our current needs but is architected to scale with our growth. The code quality, documentation, and performance are all exceptional. Best developer we've ever worked with." - David Kim, CTO</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section" data-aos="fade-up">
+            <h2>Impact by Numbers</h2>
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Satisfied Clients</div>
+                </div>
+
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-number">4.9/5</div>
+                    <div class="stat-label">Average Rating</div>
+                </div>
+
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-redo"></i>
+                    </div>
+                    <div class="stat-number">92%</div>
+                    <div class="stat-label">Repeat Clients</div>
+                </div>
+
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-number">15K+</div>
+                    <div class="stat-label">Hours of Work</div>
+                </div>
+
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platform Reviews Section -->
+        <section class="platform-reviews-section" data-aos="fade-up">
+            <h2>Platform Reviews</h2>
+            <div class="platforms-grid">
+                <div class="platform-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="platform-logo">
+                        <i class="fab fa-upwork"></i>
+                    </div>
+                    <h3 class="platform-name">Upwork</h3>
+                    <div class="platform-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="score">5.0</span>
+                    </div>
+                    <p class="platform-reviews-count">Based on 85 reviews</p>
+                </div>
+
+                <div class="platform-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="platform-logo">
+                        <i class="fab fa-freelancer"></i>
+                    </div>
+                    <h3 class="platform-name">Freelancer</h3>
+                    <div class="platform-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="score">4.9</span>
+                    </div>
+                    <p class="platform-reviews-count">Based on 62 reviews</p>
+                </div>
+
+                <div class="platform-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="platform-logo">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="platform-name">Fiverr</h3>
+                    <div class="platform-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="score">5.0</span>
+                    </div>
+                    <p class="platform-reviews-count">Based on 94 reviews</p>
+                </div>
+
+                <div class="platform-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="platform-logo">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <h3 class="platform-name">Google</h3>
+                    <div class="platform-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="score">4.9</span>
+                    </div>
+                    <p class="platform-reviews-count">Based on 47 reviews</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" data-aos="zoom-in">
+            <h2>Ready to Join These Success Stories?</h2>
+            <p>Let's create something amazing together. Get in touch to discuss your project and see how I can help you achieve exceptional results.</p>
+            <div class="cta-buttons">
+                <a href="../index.html#contact" class="cta-btn cta-btn-primary">Start Your Project</a>
+                <a href="services.html" class="cta-btn cta-btn-secondary">View Services</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Shadrack Portfolio. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Filter functionality
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        const testimonialCards = document.querySelectorAll('.testimonial-card');
+
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const filter = tab.getAttribute('data-filter');
+
+                // Update active tab
+                filterTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                // Filter testimonials
+                testimonialCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
