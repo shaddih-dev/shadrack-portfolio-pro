@@ -526,7 +526,7 @@
                 </div>
                 
                 <div class="contact-form-wrapper" data-aos="fade-left">
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xeojkeaa" method="POST">
                         <div class="form-group">
                             <input type="text" name="name" placeholder="Your Name" required>
                             <i class="fas fa-user"></i>
@@ -543,10 +543,13 @@
                             <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
                             <i class="fas fa-comment"></i>
                         </div>
+                        <input type="hidden" name="_next" value="https://shaddih-dev.github.io/shadrack-portfolio-pro/#contact">
+                        <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission!">
                         <button type="submit" class="btn btn-primary btn-block">
                             <i class="fas fa-paper-plane"></i> Send Message
                         </button>
                     </form>
+                    <div id="form-status" style="display:none; margin-top:1rem; padding:1rem; border-radius:8px; text-align:center;"></div>
                 </div>
             </div>
         </div>
