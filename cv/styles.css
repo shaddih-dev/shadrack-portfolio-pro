@@ -734,9 +734,16 @@ body {
 }
 
 @media print {
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
     body {
         background: white;
         font-size: 11pt;
+        margin: 0;
+        padding: 0;
     }
     
     .no-print {
@@ -752,6 +759,7 @@ body {
         margin: 0;
         box-shadow: none;
         border-radius: 0;
+        background: white;
     }
     
     .cv-section {
@@ -760,19 +768,49 @@ body {
     }
     
     .cv-header {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color: white !important;
+    }
+    
+    /* Ensure profile image prints */
+    .profile-image,
+    .profile-image img {
+        display: block !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    img {
+        max-width: 100%;
+        page-break-inside: avoid;
+        display: block;
     }
     
     .section-title {
         font-size: 1.3rem;
         margin-bottom: 1rem;
+        color: #333 !important;
+    }
+    
+    .section-title i {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
     }
     
     .experience-item,
-    .project-item {
+    .project-item,
+    .education-item,
+    .achievement-item {
         page-break-inside: avoid;
+        margin-bottom: 1rem;
+    }
+    
+    .skill-category,
+    .skill-tag {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
     }
     
     .skill-tag:hover,
@@ -784,6 +822,20 @@ body {
     a {
         color: var(--text-dark);
         text-decoration: none;
+    }
+    
+    /* Ensure all colors and backgrounds print */
+    .education-icon,
+    .achievement-icon,
+    .method-icon {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    /* Force page breaks where needed */
+    .projects-section,
+    .education-section {
+        page-break-before: auto;
     }
 }
 
