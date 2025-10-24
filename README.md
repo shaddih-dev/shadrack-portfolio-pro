@@ -403,7 +403,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Looking for a **Shopify Developer** or **Figma Designer**?
 
 📧 **Email:** shaddihmaina15@gmail.com
-🔗 **LinkedIn:** [linkedin.com/in/shadrack-maina](https://linkedin.com/in/shadrack-maina)
+🔗 **LinkedIn:** [linkedin.com/in/shadrack-maina-a657b2330
 🐙 **GitHub:** [github.com/shadrack](https://github.com/shadrack)
 💬 **WhatsApp:** +254 XXX XXX XXX
 
@@ -435,7 +435,7 @@ Have questions? Need support?
 
 - 📧 Email: shaddihmaina15@gmail.com
 - 💬 Twitter: [@shadrack_dev](https://twitter.com/shadrack_dev)
-- 🔗 LinkedIn: [Shadrack Maina](https://linkedin.com/in/shadrack-maina)
+- 🔗 LinkedIn: [Shadrack Maina](https://linkedin.com/in/shadrack-maina-a657b2330
 
 ---
 
@@ -447,7 +447,7 @@ Have questions? Need support?
 
 🛍️ **Shopify Expert** | 🎨 **Figma Designer** | 💻 **Full Stack Developer**
 
-[Portfolio](https://shadrack-portfolio.com) • [LinkedIn](https://linkedin.com/in/shadrack-maina) • [GitHub](https://github.com/shadrack)
+[Portfolio](https://shadrack-portfolio.com) • [LinkedIn](https://linkedin.com/in/shadrack-maina-a657b2330
 
 </div>
 

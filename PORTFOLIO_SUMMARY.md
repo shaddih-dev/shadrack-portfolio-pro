@@ -304,7 +304,7 @@ Edit `index.html` social links section.
 **Email:** shaddihmaina15@gmail.com
 **Portfolio:** https://your-domain.com (after deployment)
 **GitHub:** https://github.com/shadrack
-**LinkedIn:** https://linkedin.com/in/shadrack-maina
+**LinkedIn:** https://linkedin.com/in/shadrack-maina-a657b2330
 
 ---
 
